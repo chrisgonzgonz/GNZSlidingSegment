@@ -1,0 +1,14 @@
+PODS:
+  - GNZSlidingSegment (0.1.0)
+
+DEPENDENCIES:
+  - GNZSlidingSegment (from `../`)
+
+EXTERNAL SOURCES:
+  GNZSlidingSegment:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  GNZSlidingSegment: 28d4b49894280b1c22ba213ce300de847fddf3c2
+
+COCOAPODS: 0.39.0

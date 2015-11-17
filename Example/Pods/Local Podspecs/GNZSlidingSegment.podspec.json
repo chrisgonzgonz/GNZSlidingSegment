@@ -1,0 +1,25 @@
+{
+  "name": "GNZSlidingSegment",
+  "version": "0.1.0",
+  "summary": "A short description of GNZSlidingSegment.",
+  "description": "",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/GNZSlidingSegment",
+  "license": "MIT",
+  "authors": {
+    "Chris Gonzales": "gonzales.chris.a@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/GNZSlidingSegment.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "7.0"
+  },
+  "requires_arc": true,
+  "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "GNZSlidingSegment": [
+      "Pod/Assets/*.png"
+    ]
+  }
+}

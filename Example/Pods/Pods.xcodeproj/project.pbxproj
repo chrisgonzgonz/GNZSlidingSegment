@@ -1,0 +1,777 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0035F26357B3B715A0B05B21F673017C /* GNZSlidingSegment-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4AA154F86D1C0A1CB78CC4BC4472BB1 /* GNZSlidingSegment-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		031A5891CC6265C5D5935CF60E384FAF /* Pods-GNZSlidingSegment_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C02516C9661D0AA29CF2D3F2044621C4 /* Pods-GNZSlidingSegment_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		21C15AC7F38C5B062C02E240799BB5BB /* GNZSlidingSegment.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4E35569FD5A0F109DA55BDC1260D58B /* GNZSlidingSegment.bundle */; };
+		26AC560E332D8CC29127B347580AEC7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		449F2AE29673B6F5F7BD3B14A93FBB89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		52F15595073A6B907A3C1D3D800F53A6 /* Pods-GNZSlidingSegment_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F7AB465C22224D620064270EE226C91 /* Pods-GNZSlidingSegment_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B14451049F12855F95AA3678D32E0CF /* Pods-GNZSlidingSegment_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A590509EE69970B48FE1B660476CEF /* Pods-GNZSlidingSegment_Example-dummy.m */; };
+		83601989E4A50E2F6AF905D982996679 /* GNZSlidingSegment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62699336E20FD59CEAA186C09114B99F /* GNZSlidingSegment-dummy.m */; };
+		94085878D3DEA03D422BFBB9C9999139 /* Pods-GNZSlidingSegment_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9A863B085FEBACB812B0EFB3DC9BB1 /* Pods-GNZSlidingSegment_Tests-dummy.m */; };
+		9B8D054BFA8BE3A47BDD2584793EDC41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		AD27663A2E343B49DDBCBDBE2C283B00 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EF4F2340442DFC37FD8F06BC8A80F7 /* ReplaceMe.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CE639F1BEBE256EB5271327C8FAA6FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C96FF41B2B562091B9B44755F1E334E2;
+			remoteInfo = GNZSlidingSegment;
+		};
+		811A17789DA9E62295032AD5375BC6AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C96FF41B2B562091B9B44755F1E334E2;
+			remoteInfo = GNZSlidingSegment;
+		};
+		BEB2760E319146DEEC9CEB66D9E3A2EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E080569A8DE67C6FA2365E103DC201B6;
+			remoteInfo = "GNZSlidingSegment-GNZSlidingSegment";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0309B5162A8DEA13D32CA5365556A829 /* Pods-GNZSlidingSegment_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		09158154572B2A611C57845E87B4B1BC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09F23B122C7B1BEE4461494A64C93C74 /* Pods-GNZSlidingSegment_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GNZSlidingSegment_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		16EF4F2340442DFC37FD8F06BC8A80F7 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
+		35C153DDBE7B2C1C39559EB7B1BFCCB9 /* Pods-GNZSlidingSegment_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GNZSlidingSegment_Example.modulemap"; sourceTree = "<group>"; };
+		3E330DBF3320982C8538953C13CFB887 /* Pods-GNZSlidingSegment_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		559DE76D3796995AA6BEAA12E17FF81C /* Pods-GNZSlidingSegment_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Example-frameworks.sh"; sourceTree = "<group>"; };
+		5D19A9029990910FBA33E7ACFC808DC9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62699336E20FD59CEAA186C09114B99F /* GNZSlidingSegment-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GNZSlidingSegment-dummy.m"; sourceTree = "<group>"; };
+		6F7AB465C22224D620064270EE226C91 /* Pods-GNZSlidingSegment_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GNZSlidingSegment_Tests-umbrella.h"; sourceTree = "<group>"; };
+		7B9A863B085FEBACB812B0EFB3DC9BB1 /* Pods-GNZSlidingSegment_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GNZSlidingSegment_Tests-dummy.m"; sourceTree = "<group>"; };
+		7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GNZSlidingSegment.xcconfig; sourceTree = "<group>"; };
+		8B9EDEE5A3C5B3291426AB19157911F6 /* Pods_GNZSlidingSegment_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GNZSlidingSegment_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96194BB107E8422D2A790B9B0B6F6B10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4E35569FD5A0F109DA55BDC1260D58B /* GNZSlidingSegment.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNZSlidingSegment.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A779816008F9675345CBC968E4D2A2BD /* Pods-GNZSlidingSegment_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GNZSlidingSegment_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		B79603C384859ACC7E6C50DC46560BCC /* Pods-GNZSlidingSegment_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GNZSlidingSegment_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BB07EF3FA4E896BC0BE7645D99FFEE88 /* Pods-GNZSlidingSegment_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Tests-resources.sh"; sourceTree = "<group>"; };
+		BE84123150C7FEF1CE795E5ACE92DD40 /* Pods-GNZSlidingSegment_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GNZSlidingSegment_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C02516C9661D0AA29CF2D3F2044621C4 /* Pods-GNZSlidingSegment_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GNZSlidingSegment_Example-umbrella.h"; sourceTree = "<group>"; };
+		C0C407F0F739CD727B56331108568553 /* Pods-GNZSlidingSegment_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		C67D48EDD77C3799D1E69619EE7CBB19 /* Pods-GNZSlidingSegment_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C7816E971EF43E09ECAE7D793FEEB819 /* Pods_GNZSlidingSegment_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GNZSlidingSegment_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D48B3FF5A50DFC38C26F028CACA7A9F8 /* GNZSlidingSegment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GNZSlidingSegment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC275E9C69F2C0AEEF05B8CD9B0556F8 /* GNZSlidingSegment.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GNZSlidingSegment.modulemap; sourceTree = "<group>"; };
+		F161E6AEE768EABD79F0E3D4DD5B4DB1 /* Pods-GNZSlidingSegment_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GNZSlidingSegment_Tests.modulemap"; sourceTree = "<group>"; };
+		F371881A93405B6568E1CB2E6D063E87 /* Pods-GNZSlidingSegment_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Example-resources.sh"; sourceTree = "<group>"; };
+		F3A590509EE69970B48FE1B660476CEF /* Pods-GNZSlidingSegment_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GNZSlidingSegment_Example-dummy.m"; sourceTree = "<group>"; };
+		F4AA154F86D1C0A1CB78CC4BC4472BB1 /* GNZSlidingSegment-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GNZSlidingSegment-umbrella.h"; sourceTree = "<group>"; };
+		F74C0F8E672FFAD04A5482E59B6A1E00 /* Pods-GNZSlidingSegment_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		FABD4B19AC9699E68920B2243977EB45 /* GNZSlidingSegment-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GNZSlidingSegment-prefix.pch"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2BBCE7A618DD2446BCFA4831B7E9E4CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9B8D054BFA8BE3A47BDD2584793EDC41 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6C07DEF93DCDF0E5B6638D41C8CECE14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				449F2AE29673B6F5F7BD3B14A93FBB89 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1639A91ADFFDB8BF87C2BC61AB509DF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				26AC560E332D8CC29127B347580AEC7C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E4397E7DA603A0E0F5C4482C480A2FE8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E867F7CFC22985A34D3E5E1D6FF8FA1 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				16EF4F2340442DFC37FD8F06BC8A80F7 /* ReplaceMe.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		291A545AB1B16132BB599CD322F18A02 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C0B25BB9403DD8A509FBE07F163BC86B /* Pods-GNZSlidingSegment_Example */,
+				D0155EB7F18F643255CA1E892F10C630 /* Pods-GNZSlidingSegment_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		378E00B13044A189571171E0A2CB8237 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				0E867F7CFC22985A34D3E5E1D6FF8FA1 /* Classes */,
+			);
+			path = Pod;
+			sourceTree = "<group>";
+		};
+		7BD01396F28C30AE57710261E894BC53 /* GNZSlidingSegment */ = {
+			isa = PBXGroup;
+			children = (
+				378E00B13044A189571171E0A2CB8237 /* Pod */,
+				8BD36C67E20F91881A5A9B820780B251 /* Support Files */,
+			);
+			name = GNZSlidingSegment;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				D8096E0E540C079028FF8D15C0A4005B /* Development Pods */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				C8B9C55950F28035CC56C59A684E4D02 /* Products */,
+				291A545AB1B16132BB599CD322F18A02 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8BD36C67E20F91881A5A9B820780B251 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				DC275E9C69F2C0AEEF05B8CD9B0556F8 /* GNZSlidingSegment.modulemap */,
+				7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */,
+				62699336E20FD59CEAA186C09114B99F /* GNZSlidingSegment-dummy.m */,
+				FABD4B19AC9699E68920B2243977EB45 /* GNZSlidingSegment-prefix.pch */,
+				F4AA154F86D1C0A1CB78CC4BC4472BB1 /* GNZSlidingSegment-umbrella.h */,
+				96194BB107E8422D2A790B9B0B6F6B10 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/GNZSlidingSegment";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C0B25BB9403DD8A509FBE07F163BC86B /* Pods-GNZSlidingSegment_Example */ = {
+			isa = PBXGroup;
+			children = (
+				09158154572B2A611C57845E87B4B1BC /* Info.plist */,
+				35C153DDBE7B2C1C39559EB7B1BFCCB9 /* Pods-GNZSlidingSegment_Example.modulemap */,
+				B79603C384859ACC7E6C50DC46560BCC /* Pods-GNZSlidingSegment_Example-acknowledgements.markdown */,
+				09F23B122C7B1BEE4461494A64C93C74 /* Pods-GNZSlidingSegment_Example-acknowledgements.plist */,
+				F3A590509EE69970B48FE1B660476CEF /* Pods-GNZSlidingSegment_Example-dummy.m */,
+				559DE76D3796995AA6BEAA12E17FF81C /* Pods-GNZSlidingSegment_Example-frameworks.sh */,
+				F371881A93405B6568E1CB2E6D063E87 /* Pods-GNZSlidingSegment_Example-resources.sh */,
+				C02516C9661D0AA29CF2D3F2044621C4 /* Pods-GNZSlidingSegment_Example-umbrella.h */,
+				0309B5162A8DEA13D32CA5365556A829 /* Pods-GNZSlidingSegment_Example.debug.xcconfig */,
+				3E330DBF3320982C8538953C13CFB887 /* Pods-GNZSlidingSegment_Example.release.xcconfig */,
+			);
+			name = "Pods-GNZSlidingSegment_Example";
+			path = "Target Support Files/Pods-GNZSlidingSegment_Example";
+			sourceTree = "<group>";
+		};
+		C8B9C55950F28035CC56C59A684E4D02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4E35569FD5A0F109DA55BDC1260D58B /* GNZSlidingSegment.bundle */,
+				D48B3FF5A50DFC38C26F028CACA7A9F8 /* GNZSlidingSegment.framework */,
+				C7816E971EF43E09ECAE7D793FEEB819 /* Pods_GNZSlidingSegment_Example.framework */,
+				8B9EDEE5A3C5B3291426AB19157911F6 /* Pods_GNZSlidingSegment_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D0155EB7F18F643255CA1E892F10C630 /* Pods-GNZSlidingSegment_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				5D19A9029990910FBA33E7ACFC808DC9 /* Info.plist */,
+				F161E6AEE768EABD79F0E3D4DD5B4DB1 /* Pods-GNZSlidingSegment_Tests.modulemap */,
+				BE84123150C7FEF1CE795E5ACE92DD40 /* Pods-GNZSlidingSegment_Tests-acknowledgements.markdown */,
+				A779816008F9675345CBC968E4D2A2BD /* Pods-GNZSlidingSegment_Tests-acknowledgements.plist */,
+				7B9A863B085FEBACB812B0EFB3DC9BB1 /* Pods-GNZSlidingSegment_Tests-dummy.m */,
+				C0C407F0F739CD727B56331108568553 /* Pods-GNZSlidingSegment_Tests-frameworks.sh */,
+				BB07EF3FA4E896BC0BE7645D99FFEE88 /* Pods-GNZSlidingSegment_Tests-resources.sh */,
+				6F7AB465C22224D620064270EE226C91 /* Pods-GNZSlidingSegment_Tests-umbrella.h */,
+				F74C0F8E672FFAD04A5482E59B6A1E00 /* Pods-GNZSlidingSegment_Tests.debug.xcconfig */,
+				C67D48EDD77C3799D1E69619EE7CBB19 /* Pods-GNZSlidingSegment_Tests.release.xcconfig */,
+			);
+			name = "Pods-GNZSlidingSegment_Tests";
+			path = "Target Support Files/Pods-GNZSlidingSegment_Tests";
+			sourceTree = "<group>";
+		};
+		D8096E0E540C079028FF8D15C0A4005B /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BD01396F28C30AE57710261E894BC53 /* GNZSlidingSegment */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		275992CAAE51897BB475B1748D9B0F31 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				52F15595073A6B907A3C1D3D800F53A6 /* Pods-GNZSlidingSegment_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49D3CC72D6CF6EFA59B3EE4B4E2B3612 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				031A5891CC6265C5D5935CF60E384FAF /* Pods-GNZSlidingSegment_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		647F6F84DD6EA5CE5F9D6D0D5B5887C4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0035F26357B3B715A0B05B21F673017C /* GNZSlidingSegment-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		8BD4FEC137568DD9A843CB0C74E00B44 /* Pods-GNZSlidingSegment_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C903CE525203A0AC03A3C39F4D12157 /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Example" */;
+			buildPhases = (
+				A6A8FF23C85992637027BAE4B177557E /* Sources */,
+				D1639A91ADFFDB8BF87C2BC61AB509DF /* Frameworks */,
+				49D3CC72D6CF6EFA59B3EE4B4E2B3612 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A6A262C8F46414C429BFBE0A643B15FC /* PBXTargetDependency */,
+			);
+			name = "Pods-GNZSlidingSegment_Example";
+			productName = "Pods-GNZSlidingSegment_Example";
+			productReference = C7816E971EF43E09ECAE7D793FEEB819 /* Pods_GNZSlidingSegment_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C96FF41B2B562091B9B44755F1E334E2 /* GNZSlidingSegment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64123538062DC82E962CC28D949ACA94 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment" */;
+			buildPhases = (
+				3993C2F49D7E8693462224BA570490E6 /* Sources */,
+				6C07DEF93DCDF0E5B6638D41C8CECE14 /* Frameworks */,
+				503916BB61F1C2B6CA48D09F1B593AF0 /* Resources */,
+				647F6F84DD6EA5CE5F9D6D0D5B5887C4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5CFC7DA2153475D79535DBA672442AE8 /* PBXTargetDependency */,
+			);
+			name = GNZSlidingSegment;
+			productName = GNZSlidingSegment;
+			productReference = D48B3FF5A50DFC38C26F028CACA7A9F8 /* GNZSlidingSegment.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CA3C50367B84C92585C43AD7DA8E4AC7 /* Pods-GNZSlidingSegment_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1A18A7F42951DDA6DDA91ACEC44103A /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Tests" */;
+			buildPhases = (
+				D8C1B2AE1345879D2093E8AA48CE4A58 /* Sources */,
+				2BBCE7A618DD2446BCFA4831B7E9E4CB /* Frameworks */,
+				275992CAAE51897BB475B1748D9B0F31 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C066DB9847B6AEEA4F363DED8D199B9 /* PBXTargetDependency */,
+			);
+			name = "Pods-GNZSlidingSegment_Tests";
+			productName = "Pods-GNZSlidingSegment_Tests";
+			productReference = 8B9EDEE5A3C5B3291426AB19157911F6 /* Pods_GNZSlidingSegment_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E080569A8DE67C6FA2365E103DC201B6 /* GNZSlidingSegment-GNZSlidingSegment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1EFB5FC3CDD42068E985B175167AEA69 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment-GNZSlidingSegment" */;
+			buildPhases = (
+				148CEE7C5559E0D583E8EAD9B02DB7A5 /* Sources */,
+				E4397E7DA603A0E0F5C4482C480A2FE8 /* Frameworks */,
+				12661BE80BEE68D9EB121C9ED6D2B42C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GNZSlidingSegment-GNZSlidingSegment";
+			productName = "GNZSlidingSegment-GNZSlidingSegment";
+			productReference = A4E35569FD5A0F109DA55BDC1260D58B /* GNZSlidingSegment.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = C8B9C55950F28035CC56C59A684E4D02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C96FF41B2B562091B9B44755F1E334E2 /* GNZSlidingSegment */,
+				E080569A8DE67C6FA2365E103DC201B6 /* GNZSlidingSegment-GNZSlidingSegment */,
+				8BD4FEC137568DD9A843CB0C74E00B44 /* Pods-GNZSlidingSegment_Example */,
+				CA3C50367B84C92585C43AD7DA8E4AC7 /* Pods-GNZSlidingSegment_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		12661BE80BEE68D9EB121C9ED6D2B42C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		503916BB61F1C2B6CA48D09F1B593AF0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21C15AC7F38C5B062C02E240799BB5BB /* GNZSlidingSegment.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		148CEE7C5559E0D583E8EAD9B02DB7A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3993C2F49D7E8693462224BA570490E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83601989E4A50E2F6AF905D982996679 /* GNZSlidingSegment-dummy.m in Sources */,
+				AD27663A2E343B49DDBCBDBE2C283B00 /* ReplaceMe.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6A8FF23C85992637027BAE4B177557E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B14451049F12855F95AA3678D32E0CF /* Pods-GNZSlidingSegment_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8C1B2AE1345879D2093E8AA48CE4A58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94085878D3DEA03D422BFBB9C9999139 /* Pods-GNZSlidingSegment_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C066DB9847B6AEEA4F363DED8D199B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GNZSlidingSegment;
+			target = C96FF41B2B562091B9B44755F1E334E2 /* GNZSlidingSegment */;
+			targetProxy = 811A17789DA9E62295032AD5375BC6AA /* PBXContainerItemProxy */;
+		};
+		5CFC7DA2153475D79535DBA672442AE8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "GNZSlidingSegment-GNZSlidingSegment";
+			target = E080569A8DE67C6FA2365E103DC201B6 /* GNZSlidingSegment-GNZSlidingSegment */;
+			targetProxy = BEB2760E319146DEEC9CEB66D9E3A2EE /* PBXContainerItemProxy */;
+		};
+		A6A262C8F46414C429BFBE0A643B15FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GNZSlidingSegment;
+			target = C96FF41B2B562091B9B44755F1E334E2 /* GNZSlidingSegment */;
+			targetProxy = 4CE639F1BEBE256EB5271327C8FAA6FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		0F50F33C6BAFC6F401286E167BC9D51C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GNZSlidingSegment/GNZSlidingSegment-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GNZSlidingSegment/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GNZSlidingSegment/GNZSlidingSegment.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = GNZSlidingSegment;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		132A370986EFD0AB8604B68420F45B00 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = GNZSlidingSegment;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		3952DE34E0B51824E8CC0C2E9EE11234 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C67D48EDD77C3799D1E69619EE7CBB19 /* Pods-GNZSlidingSegment_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GNZSlidingSegment_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GNZSlidingSegment_Tests/Pods-GNZSlidingSegment_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_GNZSlidingSegment_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		54601D627E68AD3A0F7343394C5BDDB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GNZSlidingSegment/GNZSlidingSegment-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/GNZSlidingSegment/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/GNZSlidingSegment/GNZSlidingSegment.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = GNZSlidingSegment;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		78556B4722C9B2C473C5D9F39594CFD4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = GNZSlidingSegment;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		800270049B144A1C49237A168E1A4121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0309B5162A8DEA13D32CA5365556A829 /* Pods-GNZSlidingSegment_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GNZSlidingSegment_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GNZSlidingSegment_Example/Pods-GNZSlidingSegment_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_GNZSlidingSegment_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		82F199CC981B6A7EC1E6D6540239E3A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F74C0F8E672FFAD04A5482E59B6A1E00 /* Pods-GNZSlidingSegment_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GNZSlidingSegment_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GNZSlidingSegment_Tests/Pods-GNZSlidingSegment_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_GNZSlidingSegment_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DF587FF216F8D12637B05B8BBBDBD1F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E330DBF3320982C8538953C13CFB887 /* Pods-GNZSlidingSegment_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-GNZSlidingSegment_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-GNZSlidingSegment_Example/Pods-GNZSlidingSegment_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_GNZSlidingSegment_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1EFB5FC3CDD42068E985B175167AEA69 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment-GNZSlidingSegment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78556B4722C9B2C473C5D9F39594CFD4 /* Debug */,
+				132A370986EFD0AB8604B68420F45B00 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
+				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C903CE525203A0AC03A3C39F4D12157 /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				800270049B144A1C49237A168E1A4121 /* Debug */,
+				DF587FF216F8D12637B05B8BBBDBD1F4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64123538062DC82E962CC28D949ACA94 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				54601D627E68AD3A0F7343394C5BDDB1 /* Debug */,
+				0F50F33C6BAFC6F401286E167BC9D51C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1A18A7F42951DDA6DDA91ACEC44103A /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82F199CC981B6A7EC1E6D6540239E3A5 /* Debug */,
+				3952DE34E0B51824E8CC0C2E9EE11234 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

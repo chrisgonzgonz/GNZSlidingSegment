@@ -9,24 +9,24 @@
 Pod::Spec.new do |s|
   s.name             = "GNZSlidingSegment"
   s.version          = "0.1.0"
-  s.summary          = "A short description of GNZSlidingSegment."
+  s.summary          = "A combined UIPageViewController + UISegmentControl that allows for swipe or tap navigation between your child view controllers."
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!  
-  s.description      = <<-DESC
+  s.description      = <<-DESC "A combined UIPageViewController + UISegmentControl that allows for swipe or tap navigation between your child view controllers. It provides support for an arbitrary number of child view controllers and segment control customization."
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/GNZSlidingSegment"
+  s.homepage         = "https://github.com/chrisgonzgonz/GNZSlidingSegment"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Chris Gonzales" => "gonzales.chris.a@gmail.com" }
-  s.source           = { :git => "https://github.com/<GITHUB_USERNAME>/GNZSlidingSegment.git", :tag => s.version.to_s }
+  s.source           = { :git => "https://github.com/chrisgonzgonz/GNZSlidingSegment.git", :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '8.0'
   s.requires_arc = true
 
   s.source_files = 'Pod/Classes/**/*'
