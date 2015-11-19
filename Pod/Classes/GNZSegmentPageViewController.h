@@ -7,12 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GNZSegmentedControl.h"
+#import "GNZSegment.h"
 
 @class GNZSegmentPageViewController;
 
 @protocol GNZSegmentPageViewControllerDatasource <NSObject>
-- (GNZSegmentedControl *)segmentedControlForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController;
+- (id<GNZSegment>)segmentedControlForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController;
 - (UIViewController *)segmentPageController:(GNZSegmentPageViewController *)segmentPageController controllerForSegmentAtIndex:(NSUInteger)index;
 - (NSUInteger)segmentPageController:(GNZSegmentPageViewController *)segmentPageController segmentIndexForController:(UIViewController *)controller;
 @end

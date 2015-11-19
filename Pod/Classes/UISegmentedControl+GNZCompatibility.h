@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "GNZSegment.h"
 
-@interface UISegmentedControl (PageCompatibility) <GNZSegment>
+@interface UISegmentedControl (GNZCompatibility) <GNZSegment>
 
 @end

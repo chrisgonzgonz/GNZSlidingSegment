@@ -6,8 +6,8 @@
 //
 //
 
-#import "UISegmentedControl+PageCompatibility.h"
+#import "UISegmentedControl+GNZCompatibility.h"
 
-@implementation UISegmentedControl (PageCompatibility)
+@implementation UISegmentedControl (GNZCompatibility)
 
 @end

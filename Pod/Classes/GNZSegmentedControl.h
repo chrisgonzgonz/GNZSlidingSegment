@@ -7,12 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GNZSegment.h"
 
 extern NSString * const GNZSegmentOptionControlBackgroundColor;
 extern NSString * const GNZSegmentOptionSelectedSegmentTintColor;
 extern NSString * const GNZSegmentOptionDefaultSegmentTintColor;
 
-@interface GNZSegmentedControl : UIControl
+@interface GNZSegmentedControl : UIControl <GNZSegment>
 @property (nonatomic) NSUInteger selectedSegmentIndex;
 - (instancetype)initWithSegmentCount:(NSUInteger)count options:(NSDictionary *)segmentOptions;
 - (void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)segment;
