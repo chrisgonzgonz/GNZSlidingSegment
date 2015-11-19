@@ -10,8 +10,7 @@
 
 @interface GNZSegmentPageViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 @property (nonatomic) UIPageViewController *pageViewController;
-//@property (nonatomic) NSArray *controllerPages;
-@property (nonatomic) GNZSegmentedControl *feedSelectorControl;
+@property (nonatomic) id feedSelectorControl;
 @property (nonatomic) NSUInteger currentIndex;
 @end
 @implementation GNZSegmentPageViewController
@@ -56,11 +55,17 @@
 #pragma mark - Actions
 -(void)feedSelectionDidChange:(id)sender
 {
-    NSUInteger newIndex = self.feedSelectorControl.selectedSegmentIndex;
+    NSUInteger newIndex = [self.feedSelectorControl selectedSegmentIndex];
     if (newIndex == self.currentIndex) return;
+    
+    UIViewController *nextVC = [self pageForSegment:newIndex];
 
-    [self.pageViewController setViewControllers:@[[self pageForSegment:newIndex]] direction:self.currentIndex < newIndex ? UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
-    self.currentIndex = newIndex;
+    if (nextVC) {
+        [self.pageViewController setViewControllers:@[nextVC] direction:self.currentIndex < newIndex ? UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse animated:YES completion:nil];
+        self.currentIndex = newIndex;
+    } else {
+        [self.feedSelectorControl setSelectedSegmentIndex:self.currentIndex];
+    }
 }
 
 #pragma mark - UIPageViewController Datasource

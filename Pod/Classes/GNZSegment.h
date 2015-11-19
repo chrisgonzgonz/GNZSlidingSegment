@@ -10,4 +10,7 @@
 
 @protocol GNZSegment <NSObject>
 
+- (NSUInteger)selectedSegmentIndex;
+- (void)setSelectedSegmentIndex:(NSUInteger)index;
+
 @end
