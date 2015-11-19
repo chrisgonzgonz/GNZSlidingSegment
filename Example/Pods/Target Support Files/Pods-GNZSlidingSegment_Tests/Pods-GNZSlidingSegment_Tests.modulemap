@@ -1,6 +1,0 @@
-framework module Pods_GNZSlidingSegment_Tests {
-  umbrella header "Pods-GNZSlidingSegment_Tests-umbrella.h"
-
-  export *
-  module * { export * }
-}

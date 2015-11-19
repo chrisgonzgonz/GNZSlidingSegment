@@ -7,144 +7,166 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0035F26357B3B715A0B05B21F673017C /* GNZSlidingSegment-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F4AA154F86D1C0A1CB78CC4BC4472BB1 /* GNZSlidingSegment-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		031A5891CC6265C5D5935CF60E384FAF /* Pods-GNZSlidingSegment_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C02516C9661D0AA29CF2D3F2044621C4 /* Pods-GNZSlidingSegment_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		21C15AC7F38C5B062C02E240799BB5BB /* GNZSlidingSegment.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4E35569FD5A0F109DA55BDC1260D58B /* GNZSlidingSegment.bundle */; };
-		26AC560E332D8CC29127B347580AEC7C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		449F2AE29673B6F5F7BD3B14A93FBB89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		52F15595073A6B907A3C1D3D800F53A6 /* Pods-GNZSlidingSegment_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F7AB465C22224D620064270EE226C91 /* Pods-GNZSlidingSegment_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7B14451049F12855F95AA3678D32E0CF /* Pods-GNZSlidingSegment_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F3A590509EE69970B48FE1B660476CEF /* Pods-GNZSlidingSegment_Example-dummy.m */; };
-		83601989E4A50E2F6AF905D982996679 /* GNZSlidingSegment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62699336E20FD59CEAA186C09114B99F /* GNZSlidingSegment-dummy.m */; };
-		94085878D3DEA03D422BFBB9C9999139 /* Pods-GNZSlidingSegment_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B9A863B085FEBACB812B0EFB3DC9BB1 /* Pods-GNZSlidingSegment_Tests-dummy.m */; };
-		9B8D054BFA8BE3A47BDD2584793EDC41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		AD27663A2E343B49DDBCBDBE2C283B00 /* ReplaceMe.m in Sources */ = {isa = PBXBuildFile; fileRef = 16EF4F2340442DFC37FD8F06BC8A80F7 /* ReplaceMe.m */; };
+		56C13D40911F017565737D9B50E747E7 /* GNZSegmentPageController.h in Headers */ = {isa = PBXBuildFile; fileRef = C639A72888A2C660D8CEB50CED60F12A /* GNZSegmentPageController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CA27FD3FE2107561D4CD26458F06D36 /* Pods-GNZSlidingSegment_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 892A81F8BA60AA1A9F6DC05705C7DF3B /* Pods-GNZSlidingSegment_Tests-dummy.m */; };
+		615D9ABC2D769801554E911366EFEDE7 /* GNZSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B226EE5530EDA5714CB472732C7155C /* GNZSegmentedControl.m */; };
+		AD7D6FA574F86B62E39E233CD6480C47 /* Pods-GNZSlidingSegment_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34C7321D3206EA42229EDB5431C586 /* Pods-GNZSlidingSegment_Example-dummy.m */; };
+		B05A045C4AF8882B7FEF677833D250DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		B4E7A461C2A1978AAE76DC6D8DD74332 /* GNZSegmentPageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 06CE38A29A566D953971D5F0B5E33588 /* GNZSegmentPageController.m */; };
+		C150B8A9CC893C9AD2995BFC40890D82 /* GNZSlidingSegment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C4B36D7E4AAC32B6E905E13BD9E86 /* GNZSlidingSegment-dummy.m */; };
+		CCA488890079F9296251A946D6DBD4F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		D75BF604C6A40FF777900A1FBDF4E80C /* GNZSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = D95F36666771426443175D0BB8938B08 /* GNZSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE38F98DF6B17AABD1D7984C1B3445C3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4CE639F1BEBE256EB5271327C8FAA6FF /* PBXContainerItemProxy */ = {
+		073EB025DDAE6D84D940A5DCB0C36096 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = C96FF41B2B562091B9B44755F1E334E2;
-			remoteInfo = GNZSlidingSegment;
-		};
-		811A17789DA9E62295032AD5375BC6AA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C96FF41B2B562091B9B44755F1E334E2;
-			remoteInfo = GNZSlidingSegment;
-		};
-		BEB2760E319146DEEC9CEB66D9E3A2EE /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E080569A8DE67C6FA2365E103DC201B6;
+			remoteGlobalIDString = D60F449DBB2075A4E5BB1313CCF922B4;
 			remoteInfo = "GNZSlidingSegment-GNZSlidingSegment";
+		};
+		5BAC87521FE20C78D81DDCBBDFBA3BA2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2021032D8F745256ECF049EA140CAE3E;
+			remoteInfo = GNZSlidingSegment;
+		};
+		B8D09D35E40E3D8EFC137C094BE9BAFD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2021032D8F745256ECF049EA140CAE3E;
+			remoteInfo = GNZSlidingSegment;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0309B5162A8DEA13D32CA5365556A829 /* Pods-GNZSlidingSegment_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		09158154572B2A611C57845E87B4B1BC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		09F23B122C7B1BEE4461494A64C93C74 /* Pods-GNZSlidingSegment_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GNZSlidingSegment_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		16EF4F2340442DFC37FD8F06BC8A80F7 /* ReplaceMe.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = ReplaceMe.m; sourceTree = "<group>"; };
-		35C153DDBE7B2C1C39559EB7B1BFCCB9 /* Pods-GNZSlidingSegment_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GNZSlidingSegment_Example.modulemap"; sourceTree = "<group>"; };
-		3E330DBF3320982C8538953C13CFB887 /* Pods-GNZSlidingSegment_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Example.release.xcconfig"; sourceTree = "<group>"; };
+		06CE38A29A566D953971D5F0B5E33588 /* GNZSegmentPageController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GNZSegmentPageController.m; sourceTree = "<group>"; };
+		0BCA0F089BD2D8424B91A88F35775717 /* Pods-GNZSlidingSegment_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GNZSlidingSegment_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		13BE37C5F14A28E3801A6B50C2590955 /* GNZSlidingSegment-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GNZSlidingSegment-prefix.pch"; sourceTree = "<group>"; };
+		1D6F864A2FB1FD43EDBDD4FAD9D64593 /* Pods-GNZSlidingSegment_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Tests-resources.sh"; sourceTree = "<group>"; };
+		26BE780B583563631C21461CA752CF79 /* Pods-GNZSlidingSegment_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Example.release.xcconfig"; sourceTree = "<group>"; };
+		2BC586C8EB41BDF7593E75639CE8B586 /* GNZSlidingSegment.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GNZSlidingSegment.xcconfig; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		559DE76D3796995AA6BEAA12E17FF81C /* Pods-GNZSlidingSegment_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Example-frameworks.sh"; sourceTree = "<group>"; };
-		5D19A9029990910FBA33E7ACFC808DC9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		62699336E20FD59CEAA186C09114B99F /* GNZSlidingSegment-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GNZSlidingSegment-dummy.m"; sourceTree = "<group>"; };
-		6F7AB465C22224D620064270EE226C91 /* Pods-GNZSlidingSegment_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GNZSlidingSegment_Tests-umbrella.h"; sourceTree = "<group>"; };
-		7B9A863B085FEBACB812B0EFB3DC9BB1 /* Pods-GNZSlidingSegment_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GNZSlidingSegment_Tests-dummy.m"; sourceTree = "<group>"; };
-		7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GNZSlidingSegment.xcconfig; sourceTree = "<group>"; };
-		8B9EDEE5A3C5B3291426AB19157911F6 /* Pods_GNZSlidingSegment_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GNZSlidingSegment_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		96194BB107E8422D2A790B9B0B6F6B10 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4E35569FD5A0F109DA55BDC1260D58B /* GNZSlidingSegment.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNZSlidingSegment.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		A779816008F9675345CBC968E4D2A2BD /* Pods-GNZSlidingSegment_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GNZSlidingSegment_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		B79603C384859ACC7E6C50DC46560BCC /* Pods-GNZSlidingSegment_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GNZSlidingSegment_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		649BED805A6FC3E95C1B62C116F562B3 /* Pods-GNZSlidingSegment_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GNZSlidingSegment_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		649C4B36D7E4AAC32B6E905E13BD9E86 /* GNZSlidingSegment-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GNZSlidingSegment-dummy.m"; sourceTree = "<group>"; };
+		6B226EE5530EDA5714CB472732C7155C /* GNZSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GNZSegmentedControl.m; sourceTree = "<group>"; };
+		6B83C4752951D5DA921B0AE0D49A7F62 /* Pods-GNZSlidingSegment_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GNZSlidingSegment_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		81B427B887F3247128FA0F0FBCE7CBC5 /* Pods-GNZSlidingSegment_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Example-frameworks.sh"; sourceTree = "<group>"; };
+		8460160CB8CCA960C7D9F670055187F0 /* Pods-GNZSlidingSegment_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		892A81F8BA60AA1A9F6DC05705C7DF3B /* Pods-GNZSlidingSegment_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GNZSlidingSegment_Tests-dummy.m"; sourceTree = "<group>"; };
+		8C1CFF2E6B815D7F8E4CBAA76ED1B47D /* libPods-GNZSlidingSegment_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GNZSlidingSegment_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		923FC67F96D9CA4F3A4E7A920DCB9212 /* GNZSlidingSegment.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNZSlidingSegment.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		A34F83B4864D6D700FA5E62E5277640B /* Pods-GNZSlidingSegment_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		A6A71944AA15C017E94F54C526822E5F /* libGNZSlidingSegment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGNZSlidingSegment.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8FAE268866C6F9D544CE907648E83BA /* Pods-GNZSlidingSegment_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GNZSlidingSegment_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BB07EF3FA4E896BC0BE7645D99FFEE88 /* Pods-GNZSlidingSegment_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Tests-resources.sh"; sourceTree = "<group>"; };
-		BE84123150C7FEF1CE795E5ACE92DD40 /* Pods-GNZSlidingSegment_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GNZSlidingSegment_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C02516C9661D0AA29CF2D3F2044621C4 /* Pods-GNZSlidingSegment_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-GNZSlidingSegment_Example-umbrella.h"; sourceTree = "<group>"; };
-		C0C407F0F739CD727B56331108568553 /* Pods-GNZSlidingSegment_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		C67D48EDD77C3799D1E69619EE7CBB19 /* Pods-GNZSlidingSegment_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C7816E971EF43E09ECAE7D793FEEB819 /* Pods_GNZSlidingSegment_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GNZSlidingSegment_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D48B3FF5A50DFC38C26F028CACA7A9F8 /* GNZSlidingSegment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GNZSlidingSegment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC275E9C69F2C0AEEF05B8CD9B0556F8 /* GNZSlidingSegment.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = GNZSlidingSegment.modulemap; sourceTree = "<group>"; };
-		F161E6AEE768EABD79F0E3D4DD5B4DB1 /* Pods-GNZSlidingSegment_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-GNZSlidingSegment_Tests.modulemap"; sourceTree = "<group>"; };
-		F371881A93405B6568E1CB2E6D063E87 /* Pods-GNZSlidingSegment_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Example-resources.sh"; sourceTree = "<group>"; };
-		F3A590509EE69970B48FE1B660476CEF /* Pods-GNZSlidingSegment_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GNZSlidingSegment_Example-dummy.m"; sourceTree = "<group>"; };
-		F4AA154F86D1C0A1CB78CC4BC4472BB1 /* GNZSlidingSegment-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GNZSlidingSegment-umbrella.h"; sourceTree = "<group>"; };
-		F74C0F8E672FFAD04A5482E59B6A1E00 /* Pods-GNZSlidingSegment_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		FABD4B19AC9699E68920B2243977EB45 /* GNZSlidingSegment-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GNZSlidingSegment-prefix.pch"; sourceTree = "<group>"; };
+		C2C40FB6333BC1A7B9D6E64222CB115B /* Pods-GNZSlidingSegment_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		C639A72888A2C660D8CEB50CED60F12A /* GNZSegmentPageController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GNZSegmentPageController.h; sourceTree = "<group>"; };
+		D95F36666771426443175D0BB8938B08 /* GNZSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GNZSegmentedControl.h; sourceTree = "<group>"; };
+		D9BEAC6D86EF2AEC343FE392CE6CE80D /* Pods-GNZSlidingSegment_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Example-resources.sh"; sourceTree = "<group>"; };
+		DF34C7321D3206EA42229EDB5431C586 /* Pods-GNZSlidingSegment_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GNZSlidingSegment_Example-dummy.m"; sourceTree = "<group>"; };
+		F984D3CF262FFBDC6B8D1460D81821A7 /* Pods-GNZSlidingSegment_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		FCCCF71F6B681255D3F2F416C39D8D6D /* libPods-GNZSlidingSegment_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GNZSlidingSegment_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2BBCE7A618DD2446BCFA4831B7E9E4CB /* Frameworks */ = {
+		05A5FC4D7399829239ADA34C5A18F2BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B8D054BFA8BE3A47BDD2584793EDC41 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		6C07DEF93DCDF0E5B6638D41C8CECE14 /* Frameworks */ = {
+		0669E6D0E6331FA552277B39A43DAD3A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				449F2AE29673B6F5F7BD3B14A93FBB89 /* Foundation.framework in Frameworks */,
+				CCA488890079F9296251A946D6DBD4F7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1639A91ADFFDB8BF87C2BC61AB509DF /* Frameworks */ = {
+		18A311EA05C54EB5E7F1881E229AB658 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26AC560E332D8CC29127B347580AEC7C /* Foundation.framework in Frameworks */,
+				EE38F98DF6B17AABD1D7984C1B3445C3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E4397E7DA603A0E0F5C4482C480A2FE8 /* Frameworks */ = {
+		1C50212B9D2C2A2A833C906FC2F85E30 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B05A045C4AF8882B7FEF677833D250DF /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E867F7CFC22985A34D3E5E1D6FF8FA1 /* Classes */ = {
+		1E052DD94AB741C3AA26BE2443CD86FB /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				16EF4F2340442DFC37FD8F06BC8A80F7 /* ReplaceMe.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		291A545AB1B16132BB599CD322F18A02 /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C0B25BB9403DD8A509FBE07F163BC86B /* Pods-GNZSlidingSegment_Example */,
-				D0155EB7F18F643255CA1E892F10C630 /* Pods-GNZSlidingSegment_Tests */,
+				5654C1C455F7A9C7F1E6C9BC9FDD764B /* Pods-GNZSlidingSegment_Example */,
+				AA76662BC33DCA11676CD2CD69191983 /* Pods-GNZSlidingSegment_Tests */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		378E00B13044A189571171E0A2CB8237 /* Pod */ = {
+		2A8E05B1E00F25151D40C11A11468A4C /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				0E867F7CFC22985A34D3E5E1D6FF8FA1 /* Classes */,
+				36DE2BB3D7BBC02D5A245E3E33EB029A /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
 		};
-		7BD01396F28C30AE57710261E894BC53 /* GNZSlidingSegment */ = {
+		32DD613E612AD6D92A878AED478D88CC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				378E00B13044A189571171E0A2CB8237 /* Pod */,
-				8BD36C67E20F91881A5A9B820780B251 /* Support Files */,
+				923FC67F96D9CA4F3A4E7A920DCB9212 /* GNZSlidingSegment.bundle */,
+				A6A71944AA15C017E94F54C526822E5F /* libGNZSlidingSegment.a */,
+				FCCCF71F6B681255D3F2F416C39D8D6D /* libPods-GNZSlidingSegment_Example.a */,
+				8C1CFF2E6B815D7F8E4CBAA76ED1B47D /* libPods-GNZSlidingSegment_Tests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36DE2BB3D7BBC02D5A245E3E33EB029A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D95F36666771426443175D0BB8938B08 /* GNZSegmentedControl.h */,
+				6B226EE5530EDA5714CB472732C7155C /* GNZSegmentedControl.m */,
+				C639A72888A2C660D8CEB50CED60F12A /* GNZSegmentPageController.h */,
+				06CE38A29A566D953971D5F0B5E33588 /* GNZSegmentPageController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		5654C1C455F7A9C7F1E6C9BC9FDD764B /* Pods-GNZSlidingSegment_Example */ = {
+			isa = PBXGroup;
+			children = (
+				B8FAE268866C6F9D544CE907648E83BA /* Pods-GNZSlidingSegment_Example-acknowledgements.markdown */,
+				6B83C4752951D5DA921B0AE0D49A7F62 /* Pods-GNZSlidingSegment_Example-acknowledgements.plist */,
+				DF34C7321D3206EA42229EDB5431C586 /* Pods-GNZSlidingSegment_Example-dummy.m */,
+				81B427B887F3247128FA0F0FBCE7CBC5 /* Pods-GNZSlidingSegment_Example-frameworks.sh */,
+				D9BEAC6D86EF2AEC343FE392CE6CE80D /* Pods-GNZSlidingSegment_Example-resources.sh */,
+				F984D3CF262FFBDC6B8D1460D81821A7 /* Pods-GNZSlidingSegment_Example.debug.xcconfig */,
+				26BE780B583563631C21461CA752CF79 /* Pods-GNZSlidingSegment_Example.release.xcconfig */,
+			);
+			name = "Pods-GNZSlidingSegment_Example";
+			path = "Target Support Files/Pods-GNZSlidingSegment_Example";
+			sourceTree = "<group>";
+		};
+		73C525BD8CEAC8E28D8C3BA65BB40C3D /* GNZSlidingSegment */ = {
+			isa = PBXGroup;
+			children = (
+				2A8E05B1E00F25151D40C11A11468A4C /* Pod */,
+				AAA861EB5DE695D0123EDDEB563FD278 /* Support Files */,
 			);
 			name = GNZSlidingSegment;
 			path = ../..;
@@ -156,20 +178,32 @@
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
 				D8096E0E540C079028FF8D15C0A4005B /* Development Pods */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				C8B9C55950F28035CC56C59A684E4D02 /* Products */,
-				291A545AB1B16132BB599CD322F18A02 /* Targets Support Files */,
+				32DD613E612AD6D92A878AED478D88CC /* Products */,
+				1E052DD94AB741C3AA26BE2443CD86FB /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8BD36C67E20F91881A5A9B820780B251 /* Support Files */ = {
+		AA76662BC33DCA11676CD2CD69191983 /* Pods-GNZSlidingSegment_Tests */ = {
 			isa = PBXGroup;
 			children = (
-				DC275E9C69F2C0AEEF05B8CD9B0556F8 /* GNZSlidingSegment.modulemap */,
-				7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */,
-				62699336E20FD59CEAA186C09114B99F /* GNZSlidingSegment-dummy.m */,
-				FABD4B19AC9699E68920B2243977EB45 /* GNZSlidingSegment-prefix.pch */,
-				F4AA154F86D1C0A1CB78CC4BC4472BB1 /* GNZSlidingSegment-umbrella.h */,
-				96194BB107E8422D2A790B9B0B6F6B10 /* Info.plist */,
+				0BCA0F089BD2D8424B91A88F35775717 /* Pods-GNZSlidingSegment_Tests-acknowledgements.markdown */,
+				649BED805A6FC3E95C1B62C116F562B3 /* Pods-GNZSlidingSegment_Tests-acknowledgements.plist */,
+				892A81F8BA60AA1A9F6DC05705C7DF3B /* Pods-GNZSlidingSegment_Tests-dummy.m */,
+				A34F83B4864D6D700FA5E62E5277640B /* Pods-GNZSlidingSegment_Tests-frameworks.sh */,
+				1D6F864A2FB1FD43EDBDD4FAD9D64593 /* Pods-GNZSlidingSegment_Tests-resources.sh */,
+				8460160CB8CCA960C7D9F670055187F0 /* Pods-GNZSlidingSegment_Tests.debug.xcconfig */,
+				C2C40FB6333BC1A7B9D6E64222CB115B /* Pods-GNZSlidingSegment_Tests.release.xcconfig */,
+			);
+			name = "Pods-GNZSlidingSegment_Tests";
+			path = "Target Support Files/Pods-GNZSlidingSegment_Tests";
+			sourceTree = "<group>";
+		};
+		AAA861EB5DE695D0123EDDEB563FD278 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BC586C8EB41BDF7593E75639CE8B586 /* GNZSlidingSegment.xcconfig */,
+				649C4B36D7E4AAC32B6E905E13BD9E86 /* GNZSlidingSegment-dummy.m */,
+				13BE37C5F14A28E3801A6B50C2590955 /* GNZSlidingSegment-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "Example/Pods/Target Support Files/GNZSlidingSegment";
@@ -191,57 +225,10 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		C0B25BB9403DD8A509FBE07F163BC86B /* Pods-GNZSlidingSegment_Example */ = {
-			isa = PBXGroup;
-			children = (
-				09158154572B2A611C57845E87B4B1BC /* Info.plist */,
-				35C153DDBE7B2C1C39559EB7B1BFCCB9 /* Pods-GNZSlidingSegment_Example.modulemap */,
-				B79603C384859ACC7E6C50DC46560BCC /* Pods-GNZSlidingSegment_Example-acknowledgements.markdown */,
-				09F23B122C7B1BEE4461494A64C93C74 /* Pods-GNZSlidingSegment_Example-acknowledgements.plist */,
-				F3A590509EE69970B48FE1B660476CEF /* Pods-GNZSlidingSegment_Example-dummy.m */,
-				559DE76D3796995AA6BEAA12E17FF81C /* Pods-GNZSlidingSegment_Example-frameworks.sh */,
-				F371881A93405B6568E1CB2E6D063E87 /* Pods-GNZSlidingSegment_Example-resources.sh */,
-				C02516C9661D0AA29CF2D3F2044621C4 /* Pods-GNZSlidingSegment_Example-umbrella.h */,
-				0309B5162A8DEA13D32CA5365556A829 /* Pods-GNZSlidingSegment_Example.debug.xcconfig */,
-				3E330DBF3320982C8538953C13CFB887 /* Pods-GNZSlidingSegment_Example.release.xcconfig */,
-			);
-			name = "Pods-GNZSlidingSegment_Example";
-			path = "Target Support Files/Pods-GNZSlidingSegment_Example";
-			sourceTree = "<group>";
-		};
-		C8B9C55950F28035CC56C59A684E4D02 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				A4E35569FD5A0F109DA55BDC1260D58B /* GNZSlidingSegment.bundle */,
-				D48B3FF5A50DFC38C26F028CACA7A9F8 /* GNZSlidingSegment.framework */,
-				C7816E971EF43E09ECAE7D793FEEB819 /* Pods_GNZSlidingSegment_Example.framework */,
-				8B9EDEE5A3C5B3291426AB19157911F6 /* Pods_GNZSlidingSegment_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		D0155EB7F18F643255CA1E892F10C630 /* Pods-GNZSlidingSegment_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				5D19A9029990910FBA33E7ACFC808DC9 /* Info.plist */,
-				F161E6AEE768EABD79F0E3D4DD5B4DB1 /* Pods-GNZSlidingSegment_Tests.modulemap */,
-				BE84123150C7FEF1CE795E5ACE92DD40 /* Pods-GNZSlidingSegment_Tests-acknowledgements.markdown */,
-				A779816008F9675345CBC968E4D2A2BD /* Pods-GNZSlidingSegment_Tests-acknowledgements.plist */,
-				7B9A863B085FEBACB812B0EFB3DC9BB1 /* Pods-GNZSlidingSegment_Tests-dummy.m */,
-				C0C407F0F739CD727B56331108568553 /* Pods-GNZSlidingSegment_Tests-frameworks.sh */,
-				BB07EF3FA4E896BC0BE7645D99FFEE88 /* Pods-GNZSlidingSegment_Tests-resources.sh */,
-				6F7AB465C22224D620064270EE226C91 /* Pods-GNZSlidingSegment_Tests-umbrella.h */,
-				F74C0F8E672FFAD04A5482E59B6A1E00 /* Pods-GNZSlidingSegment_Tests.debug.xcconfig */,
-				C67D48EDD77C3799D1E69619EE7CBB19 /* Pods-GNZSlidingSegment_Tests.release.xcconfig */,
-			);
-			name = "Pods-GNZSlidingSegment_Tests";
-			path = "Target Support Files/Pods-GNZSlidingSegment_Tests";
-			sourceTree = "<group>";
-		};
 		D8096E0E540C079028FF8D15C0A4005B /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				7BD01396F28C30AE57710261E894BC53 /* GNZSlidingSegment */,
+				73C525BD8CEAC8E28D8C3BA65BB40C3D /* GNZSlidingSegment */,
 			);
 			name = "Development Pods";
 			sourceTree = "<group>";
@@ -249,95 +236,77 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		275992CAAE51897BB475B1748D9B0F31 /* Headers */ = {
+		9570641BEF067658EB1D2DEB0ABCBB56 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52F15595073A6B907A3C1D3D800F53A6 /* Pods-GNZSlidingSegment_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49D3CC72D6CF6EFA59B3EE4B4E2B3612 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				031A5891CC6265C5D5935CF60E384FAF /* Pods-GNZSlidingSegment_Example-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		647F6F84DD6EA5CE5F9D6D0D5B5887C4 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0035F26357B3B715A0B05B21F673017C /* GNZSlidingSegment-umbrella.h in Headers */,
+				D75BF604C6A40FF777900A1FBDF4E80C /* GNZSegmentedControl.h in Headers */,
+				56C13D40911F017565737D9B50E747E7 /* GNZSegmentPageController.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		8BD4FEC137568DD9A843CB0C74E00B44 /* Pods-GNZSlidingSegment_Example */ = {
+		2021032D8F745256ECF049EA140CAE3E /* GNZSlidingSegment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4C903CE525203A0AC03A3C39F4D12157 /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Example" */;
+			buildConfigurationList = FF1BBFD67FF46A1891532B12F392C345 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment" */;
 			buildPhases = (
-				A6A8FF23C85992637027BAE4B177557E /* Sources */,
-				D1639A91ADFFDB8BF87C2BC61AB509DF /* Frameworks */,
-				49D3CC72D6CF6EFA59B3EE4B4E2B3612 /* Headers */,
+				3633BD3BF0D6C106F5EDE4B13015F558 /* Sources */,
+				18A311EA05C54EB5E7F1881E229AB658 /* Frameworks */,
+				9570641BEF067658EB1D2DEB0ABCBB56 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				A6A262C8F46414C429BFBE0A643B15FC /* PBXTargetDependency */,
-			);
-			name = "Pods-GNZSlidingSegment_Example";
-			productName = "Pods-GNZSlidingSegment_Example";
-			productReference = C7816E971EF43E09ECAE7D793FEEB819 /* Pods_GNZSlidingSegment_Example.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C96FF41B2B562091B9B44755F1E334E2 /* GNZSlidingSegment */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 64123538062DC82E962CC28D949ACA94 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment" */;
-			buildPhases = (
-				3993C2F49D7E8693462224BA570490E6 /* Sources */,
-				6C07DEF93DCDF0E5B6638D41C8CECE14 /* Frameworks */,
-				503916BB61F1C2B6CA48D09F1B593AF0 /* Resources */,
-				647F6F84DD6EA5CE5F9D6D0D5B5887C4 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				5CFC7DA2153475D79535DBA672442AE8 /* PBXTargetDependency */,
+				A9B245CAE8E96299A3AD1DBC46E935C8 /* PBXTargetDependency */,
 			);
 			name = GNZSlidingSegment;
 			productName = GNZSlidingSegment;
-			productReference = D48B3FF5A50DFC38C26F028CACA7A9F8 /* GNZSlidingSegment.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = A6A71944AA15C017E94F54C526822E5F /* libGNZSlidingSegment.a */;
+			productType = "com.apple.product-type.library.static";
 		};
-		CA3C50367B84C92585C43AD7DA8E4AC7 /* Pods-GNZSlidingSegment_Tests */ = {
+		47BA0283C52B5F5CFA11E396D77A4F2A /* Pods-GNZSlidingSegment_Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C1A18A7F42951DDA6DDA91ACEC44103A /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Tests" */;
+			buildConfigurationList = 7CD87AC6C8DBA5BFD992543D32B194C9 /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Tests" */;
 			buildPhases = (
-				D8C1B2AE1345879D2093E8AA48CE4A58 /* Sources */,
-				2BBCE7A618DD2446BCFA4831B7E9E4CB /* Frameworks */,
-				275992CAAE51897BB475B1748D9B0F31 /* Headers */,
+				0B602BEEF199086EA036B7D7F4870D29 /* Sources */,
+				0669E6D0E6331FA552277B39A43DAD3A /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				4C066DB9847B6AEEA4F363DED8D199B9 /* PBXTargetDependency */,
+				471D5F4F8A1A5F9472770B14BF47804A /* PBXTargetDependency */,
 			);
 			name = "Pods-GNZSlidingSegment_Tests";
 			productName = "Pods-GNZSlidingSegment_Tests";
-			productReference = 8B9EDEE5A3C5B3291426AB19157911F6 /* Pods_GNZSlidingSegment_Tests.framework */;
-			productType = "com.apple.product-type.framework";
+			productReference = 8C1CFF2E6B815D7F8E4CBAA76ED1B47D /* libPods-GNZSlidingSegment_Tests.a */;
+			productType = "com.apple.product-type.library.static";
 		};
-		E080569A8DE67C6FA2365E103DC201B6 /* GNZSlidingSegment-GNZSlidingSegment */ = {
+		D28172E3DF916DA63BB26207181B5201 /* Pods-GNZSlidingSegment_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1EFB5FC3CDD42068E985B175167AEA69 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment-GNZSlidingSegment" */;
+			buildConfigurationList = FC3B186A8090565234B702F261E9726C /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Example" */;
 			buildPhases = (
-				148CEE7C5559E0D583E8EAD9B02DB7A5 /* Sources */,
-				E4397E7DA603A0E0F5C4482C480A2FE8 /* Frameworks */,
-				12661BE80BEE68D9EB121C9ED6D2B42C /* Resources */,
+				0706A1528DE71B8AF9B09E8390F61031 /* Sources */,
+				1C50212B9D2C2A2A833C906FC2F85E30 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				308F5F682185C79A36A0774673736AF9 /* PBXTargetDependency */,
+			);
+			name = "Pods-GNZSlidingSegment_Example";
+			productName = "Pods-GNZSlidingSegment_Example";
+			productReference = FCCCF71F6B681255D3F2F416C39D8D6D /* libPods-GNZSlidingSegment_Example.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		D60F449DBB2075A4E5BB1313CCF922B4 /* GNZSlidingSegment-GNZSlidingSegment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8FD40735D69AE2D47DF61A1C33E86B3 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment-GNZSlidingSegment" */;
+			buildPhases = (
+				F7EB9B325929B44D78F83CE2CE77DE2F /* Sources */,
+				05A5FC4D7399829239ADA34C5A18F2BF /* Frameworks */,
+				598884F00F705B393A3B47BD6A93371F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -345,7 +314,7 @@
 			);
 			name = "GNZSlidingSegment-GNZSlidingSegment";
 			productName = "GNZSlidingSegment-GNZSlidingSegment";
-			productReference = A4E35569FD5A0F109DA55BDC1260D58B /* GNZSlidingSegment.bundle */;
+			productReference = 923FC67F96D9CA4F3A4E7A920DCB9212 /* GNZSlidingSegment.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -365,128 +334,152 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = C8B9C55950F28035CC56C59A684E4D02 /* Products */;
+			productRefGroup = 32DD613E612AD6D92A878AED478D88CC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C96FF41B2B562091B9B44755F1E334E2 /* GNZSlidingSegment */,
-				E080569A8DE67C6FA2365E103DC201B6 /* GNZSlidingSegment-GNZSlidingSegment */,
-				8BD4FEC137568DD9A843CB0C74E00B44 /* Pods-GNZSlidingSegment_Example */,
-				CA3C50367B84C92585C43AD7DA8E4AC7 /* Pods-GNZSlidingSegment_Tests */,
+				2021032D8F745256ECF049EA140CAE3E /* GNZSlidingSegment */,
+				D60F449DBB2075A4E5BB1313CCF922B4 /* GNZSlidingSegment-GNZSlidingSegment */,
+				D28172E3DF916DA63BB26207181B5201 /* Pods-GNZSlidingSegment_Example */,
+				47BA0283C52B5F5CFA11E396D77A4F2A /* Pods-GNZSlidingSegment_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		12661BE80BEE68D9EB121C9ED6D2B42C /* Resources */ = {
+		598884F00F705B393A3B47BD6A93371F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		503916BB61F1C2B6CA48D09F1B593AF0 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				21C15AC7F38C5B062C02E240799BB5BB /* GNZSlidingSegment.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		148CEE7C5559E0D583E8EAD9B02DB7A5 /* Sources */ = {
+		0706A1528DE71B8AF9B09E8390F61031 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7D6FA574F86B62E39E233CD6480C47 /* Pods-GNZSlidingSegment_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3993C2F49D7E8693462224BA570490E6 /* Sources */ = {
+		0B602BEEF199086EA036B7D7F4870D29 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83601989E4A50E2F6AF905D982996679 /* GNZSlidingSegment-dummy.m in Sources */,
-				AD27663A2E343B49DDBCBDBE2C283B00 /* ReplaceMe.m in Sources */,
+				5CA27FD3FE2107561D4CD26458F06D36 /* Pods-GNZSlidingSegment_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A6A8FF23C85992637027BAE4B177557E /* Sources */ = {
+		3633BD3BF0D6C106F5EDE4B13015F558 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B14451049F12855F95AA3678D32E0CF /* Pods-GNZSlidingSegment_Example-dummy.m in Sources */,
+				615D9ABC2D769801554E911366EFEDE7 /* GNZSegmentedControl.m in Sources */,
+				B4E7A461C2A1978AAE76DC6D8DD74332 /* GNZSegmentPageController.m in Sources */,
+				C150B8A9CC893C9AD2995BFC40890D82 /* GNZSlidingSegment-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8C1B2AE1345879D2093E8AA48CE4A58 /* Sources */ = {
+		F7EB9B325929B44D78F83CE2CE77DE2F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94085878D3DEA03D422BFBB9C9999139 /* Pods-GNZSlidingSegment_Tests-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4C066DB9847B6AEEA4F363DED8D199B9 /* PBXTargetDependency */ = {
+		308F5F682185C79A36A0774673736AF9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GNZSlidingSegment;
-			target = C96FF41B2B562091B9B44755F1E334E2 /* GNZSlidingSegment */;
-			targetProxy = 811A17789DA9E62295032AD5375BC6AA /* PBXContainerItemProxy */;
+			target = 2021032D8F745256ECF049EA140CAE3E /* GNZSlidingSegment */;
+			targetProxy = B8D09D35E40E3D8EFC137C094BE9BAFD /* PBXContainerItemProxy */;
 		};
-		5CFC7DA2153475D79535DBA672442AE8 /* PBXTargetDependency */ = {
+		471D5F4F8A1A5F9472770B14BF47804A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = GNZSlidingSegment;
+			target = 2021032D8F745256ECF049EA140CAE3E /* GNZSlidingSegment */;
+			targetProxy = 5BAC87521FE20C78D81DDCBBDFBA3BA2 /* PBXContainerItemProxy */;
+		};
+		A9B245CAE8E96299A3AD1DBC46E935C8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "GNZSlidingSegment-GNZSlidingSegment";
-			target = E080569A8DE67C6FA2365E103DC201B6 /* GNZSlidingSegment-GNZSlidingSegment */;
-			targetProxy = BEB2760E319146DEEC9CEB66D9E3A2EE /* PBXContainerItemProxy */;
-		};
-		A6A262C8F46414C429BFBE0A643B15FC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GNZSlidingSegment;
-			target = C96FF41B2B562091B9B44755F1E334E2 /* GNZSlidingSegment */;
-			targetProxy = 4CE639F1BEBE256EB5271327C8FAA6FF /* PBXContainerItemProxy */;
+			target = D60F449DBB2075A4E5BB1313CCF922B4 /* GNZSlidingSegment-GNZSlidingSegment */;
+			targetProxy = 073EB025DDAE6D84D940A5DCB0C36096 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		03CA91998D6773EC5D02B3DB87B8353E /* Release */ = {
+		186E0E8F095515803390DA8AFBCA7A1C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC586C8EB41BDF7593E75639CE8B586 /* GNZSlidingSegment.xcconfig */;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = GNZSlidingSegment;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		6E65C48DCCCD1C307977211E370D1CF7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC586C8EB41BDF7593E75639CE8B586 /* GNZSlidingSegment.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GNZSlidingSegment/GNZSlidingSegment-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
-		0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */ = {
+		6F34397A42D8418F04CD6AC9AE1E4AD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC586C8EB41BDF7593E75639CE8B586 /* GNZSlidingSegment.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/GNZSlidingSegment/GNZSlidingSegment-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		8C93FE58175B80722B276DF3E4288279 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8460160CB8CCA960C7D9F670055187F0 /* Pods-GNZSlidingSegment_Tests.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -518,43 +511,16 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		0F50F33C6BAFC6F401286E167BC9D51C /* Release */ = {
+		BA7A1FA1004542C4882AA3140B0B682E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GNZSlidingSegment/GNZSlidingSegment-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GNZSlidingSegment/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GNZSlidingSegment/GNZSlidingSegment.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = GNZSlidingSegment;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		132A370986EFD0AB8604B68420F45B00 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */;
+			baseConfigurationReference = 2BC586C8EB41BDF7593E75639CE8B586 /* GNZSlidingSegment.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				PRODUCT_NAME = GNZSlidingSegment;
@@ -564,209 +530,135 @@
 			};
 			name = Release;
 		};
-		3952DE34E0B51824E8CC0C2E9EE11234 /* Release */ = {
+		D96A73F9D0CA146F3BA6B9331506F189 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C67D48EDD77C3799D1E69619EE7CBB19 /* Pods-GNZSlidingSegment_Tests.release.xcconfig */;
+			baseConfigurationReference = 26BE780B583563631C21461CA752CF79 /* Pods-GNZSlidingSegment_Example.release.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-GNZSlidingSegment_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GNZSlidingSegment_Tests/Pods-GNZSlidingSegment_Tests.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_GNZSlidingSegment_Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
 		};
-		54601D627E68AD3A0F7343394C5BDDB1 /* Debug */ = {
+		E8369D959F977E8594BB3B542629FC9C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/GNZSlidingSegment/GNZSlidingSegment-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/GNZSlidingSegment/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/GNZSlidingSegment/GNZSlidingSegment.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = GNZSlidingSegment;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		78556B4722C9B2C473C5D9F39594CFD4 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7BAA651C3BD3C15EF7746AEDE7B728E6 /* GNZSlidingSegment.xcconfig */;
+			baseConfigurationReference = C2C40FB6333BC1A7B9D6E64222CB115B /* Pods-GNZSlidingSegment_Tests.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				PRODUCT_NAME = GNZSlidingSegment;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		800270049B144A1C49237A168E1A4121 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0309B5162A8DEA13D32CA5365556A829 /* Pods-GNZSlidingSegment_Example.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-GNZSlidingSegment_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GNZSlidingSegment_Example/Pods-GNZSlidingSegment_Example.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_GNZSlidingSegment_Example;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		82F199CC981B6A7EC1E6D6540239E3A5 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F74C0F8E672FFAD04A5482E59B6A1E00 /* Pods-GNZSlidingSegment_Tests.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-GNZSlidingSegment_Tests/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GNZSlidingSegment_Tests/Pods-GNZSlidingSegment_Tests.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_GNZSlidingSegment_Tests;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DF587FF216F8D12637B05B8BBBDBD1F4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3E330DBF3320982C8538953C13CFB887 /* Pods-GNZSlidingSegment_Example.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-GNZSlidingSegment_Example/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-GNZSlidingSegment_Example/Pods-GNZSlidingSegment_Example.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_GNZSlidingSegment_Example;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB7EC22777DEA5EAB3669353BB681F30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F984D3CF262FFBDC6B8D1460D81821A7 /* Pods-GNZSlidingSegment_Example.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1EFB5FC3CDD42068E985B175167AEA69 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment-GNZSlidingSegment" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				78556B4722C9B2C473C5D9F39594CFD4 /* Debug */,
-				132A370986EFD0AB8604B68420F45B00 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B57334D6C23DADAA4F7D802A5760EB2 /* Debug */,
-				03CA91998D6773EC5D02B3DB87B8353E /* Release */,
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4C903CE525203A0AC03A3C39F4D12157 /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Example" */ = {
+		7CD87AC6C8DBA5BFD992543D32B194C9 /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				800270049B144A1C49237A168E1A4121 /* Debug */,
-				DF587FF216F8D12637B05B8BBBDBD1F4 /* Release */,
+				8C93FE58175B80722B276DF3E4288279 /* Debug */,
+				E8369D959F977E8594BB3B542629FC9C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		64123538062DC82E962CC28D949ACA94 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment" */ = {
+		D8FD40735D69AE2D47DF61A1C33E86B3 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment-GNZSlidingSegment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				54601D627E68AD3A0F7343394C5BDDB1 /* Debug */,
-				0F50F33C6BAFC6F401286E167BC9D51C /* Release */,
+				186E0E8F095515803390DA8AFBCA7A1C /* Debug */,
+				BA7A1FA1004542C4882AA3140B0B682E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C1A18A7F42951DDA6DDA91ACEC44103A /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Tests" */ = {
+		FC3B186A8090565234B702F261E9726C /* Build configuration list for PBXNativeTarget "Pods-GNZSlidingSegment_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				82F199CC981B6A7EC1E6D6540239E3A5 /* Debug */,
-				3952DE34E0B51824E8CC0C2E9EE11234 /* Release */,
+				FB7EC22777DEA5EAB3669353BB681F30 /* Debug */,
+				D96A73F9D0CA146F3BA6B9331506F189 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF1BBFD67FF46A1891532B12F392C345 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F34397A42D8418F04CD6AC9AE1E4AD8 /* Debug */,
+				6E65C48DCCCD1C307977211E370D1CF7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

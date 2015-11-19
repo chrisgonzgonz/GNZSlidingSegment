@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BFC732B084E6DC16625D1F58'
+               BlueprintIdentifier = 'CE4F7191A6E873758DAF41C5'
                BlueprintName = 'GNZSlidingSegment'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'GNZSlidingSegment.framework'>
+               BuildableName = 'libGNZSlidingSegment.a'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

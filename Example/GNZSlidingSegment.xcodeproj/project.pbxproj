@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		30A8A9522F457281573CC7C4 /* Pods_GNZSlidingSegment_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0F3909FED77A8F03F674DF /* Pods_GNZSlidingSegment_Example.framework */; };
 		6003F58E195388D20070C39A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58D195388D20070C39A /* Foundation.framework */; };
 		6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F58F195388D20070C39A /* CoreGraphics.framework */; };
 		6003F592195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
@@ -21,8 +20,11 @@
 		6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6003F591195388D20070C39A /* UIKit.framework */; };
 		6003F5BA195388D20070C39A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6003F5B8195388D20070C39A /* InfoPlist.strings */; };
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
+		72DB57E61BFD28620067436E /* GNZPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72DB57E41BFD28620067436E /* GNZPageViewController.m */; };
+		72DB57E71BFD28620067436E /* GNZPageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72DB57E51BFD28620067436E /* GNZPageViewController.xib */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
-		DC8D1ADB4E1F128974496287 /* Pods_GNZSlidingSegment_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 065F1E5B09673CC0EA4A971B /* Pods_GNZSlidingSegment_Tests.framework */; };
+		FB0796CEF17D5835D96EE8A6 /* libPods-GNZSlidingSegment_Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00BCAE2F458335B7F0E0E186 /* libPods-GNZSlidingSegment_Tests.a */; };
+		FEA2803A142DE88C51D6DEE2 /* libPods-GNZSlidingSegment_Example.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2FF5CD5AD7B54EAD647C2C /* libPods-GNZSlidingSegment_Example.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		065F1E5B09673CC0EA4A971B /* Pods_GNZSlidingSegment_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GNZSlidingSegment_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		00BCAE2F458335B7F0E0E186 /* libPods-GNZSlidingSegment_Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GNZSlidingSegment_Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5347A9794CC4F5872D620C /* Pods-GNZSlidingSegment_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GNZSlidingSegment_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GNZSlidingSegment_Tests/Pods-GNZSlidingSegment_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		6003F58A195388D20070C39A /* GNZSlidingSegment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GNZSlidingSegment.app; path = GNZSlidingSegment_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F58A195388D20070C39A /* GNZSlidingSegment_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GNZSlidingSegment_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F58D195388D20070C39A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6003F58F195388D20070C39A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		6003F591195388D20070C39A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -51,18 +53,21 @@
 		6003F5A5195388D20070C39A /* GNZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GNZViewController.h; sourceTree = "<group>"; };
 		6003F5A6195388D20070C39A /* GNZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GNZViewController.m; sourceTree = "<group>"; };
 		6003F5A8195388D20070C39A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		6003F5AE195388D20070C39A /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = GNZSlidingSegment_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6003F5AE195388D20070C39A /* GNZSlidingSegment_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNZSlidingSegment_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6003F5AF195388D20070C39A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		6003F5B7195388D20070C39A /* Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Tests-Info.plist"; sourceTree = "<group>"; };
 		6003F5B9195388D20070C39A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		6003F5BB195388D20070C39A /* Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
 		606FC2411953D9B200FFA9A0 /* Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tests-Prefix.pch"; sourceTree = "<group>"; };
+		72DB57E31BFD28620067436E /* GNZPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GNZPageViewController.h; sourceTree = "<group>"; };
+		72DB57E41BFD28620067436E /* GNZPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GNZPageViewController.m; sourceTree = "<group>"; };
+		72DB57E51BFD28620067436E /* GNZPageViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GNZPageViewController.xib; sourceTree = "<group>"; };
 		816F535E05E4683F73996F90 /* Pods-GNZSlidingSegment_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GNZSlidingSegment_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-GNZSlidingSegment_Example/Pods-GNZSlidingSegment_Example.release.xcconfig"; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		8F0F3909FED77A8F03F674DF /* Pods_GNZSlidingSegment_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GNZSlidingSegment_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C9B0965881280E17A3A26E /* GNZSlidingSegment.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GNZSlidingSegment.podspec; path = ../GNZSlidingSegment.podspec; sourceTree = "<group>"; };
 		9D606A8034E22A1D939142DC /* Pods-GNZSlidingSegment_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GNZSlidingSegment_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GNZSlidingSegment_Example/Pods-GNZSlidingSegment_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		9E09ECAA5C6432D2F93D9927 /* Pods-GNZSlidingSegment_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GNZSlidingSegment_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GNZSlidingSegment_Tests/Pods-GNZSlidingSegment_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		CB2FF5CD5AD7B54EAD647C2C /* libPods-GNZSlidingSegment_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GNZSlidingSegment_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3D96D5441C581E2E66AC84C /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		F47B1C21F0FC3C4E4B0ADE09 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,7 +80,7 @@
 				6003F590195388D20070C39A /* CoreGraphics.framework in Frameworks */,
 				6003F592195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F58E195388D20070C39A /* Foundation.framework in Frameworks */,
-				30A8A9522F457281573CC7C4 /* Pods_GNZSlidingSegment_Example.framework in Frameworks */,
+				FEA2803A142DE88C51D6DEE2 /* libPods-GNZSlidingSegment_Example.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +91,7 @@
 				6003F5B0195388D20070C39A /* XCTest.framework in Frameworks */,
 				6003F5B2195388D20070C39A /* UIKit.framework in Frameworks */,
 				6003F5B1195388D20070C39A /* Foundation.framework in Frameworks */,
-				DC8D1ADB4E1F128974496287 /* Pods_GNZSlidingSegment_Tests.framework in Frameworks */,
+				FB0796CEF17D5835D96EE8A6 /* libPods-GNZSlidingSegment_Tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,8 +113,8 @@
 		6003F58B195388D20070C39A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6003F58A195388D20070C39A /* GNZSlidingSegment.app */,
-				6003F5AE195388D20070C39A /* Tests.xctest */,
+				6003F58A195388D20070C39A /* GNZSlidingSegment_Example.app */,
+				6003F5AE195388D20070C39A /* GNZSlidingSegment_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -121,8 +126,8 @@
 				6003F58F195388D20070C39A /* CoreGraphics.framework */,
 				6003F591195388D20070C39A /* UIKit.framework */,
 				6003F5AF195388D20070C39A /* XCTest.framework */,
-				8F0F3909FED77A8F03F674DF /* Pods_GNZSlidingSegment_Example.framework */,
-				065F1E5B09673CC0EA4A971B /* Pods_GNZSlidingSegment_Tests.framework */,
+				CB2FF5CD5AD7B54EAD647C2C /* libPods-GNZSlidingSegment_Example.a */,
+				00BCAE2F458335B7F0E0E186 /* libPods-GNZSlidingSegment_Tests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,6 +140,9 @@
 				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* GNZViewController.h */,
 				6003F5A6195388D20070C39A /* GNZViewController.m */,
+				72DB57E31BFD28620067436E /* GNZPageViewController.h */,
+				72DB57E41BFD28620067436E /* GNZPageViewController.m */,
+				72DB57E51BFD28620067436E /* GNZPageViewController.xib */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
 			);
@@ -213,7 +221,7 @@
 			);
 			name = GNZSlidingSegment_Example;
 			productName = GNZSlidingSegment;
-			productReference = 6003F58A195388D20070C39A /* GNZSlidingSegment.app */;
+			productReference = 6003F58A195388D20070C39A /* GNZSlidingSegment_Example.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6003F5AD195388D20070C39A /* GNZSlidingSegment_Tests */ = {
@@ -234,7 +242,7 @@
 			);
 			name = GNZSlidingSegment_Tests;
 			productName = GNZSlidingSegmentTests;
-			productReference = 6003F5AE195388D20070C39A /* Tests.xctest */;
+			productReference = 6003F5AE195388D20070C39A /* GNZSlidingSegment_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -244,7 +252,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = GNZ;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Chris Gonzales";
 				TargetAttributes = {
 					6003F5AD195388D20070C39A = {
@@ -277,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
+				72DB57E71BFD28620067436E /* GNZPageViewController.xib in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -391,6 +400,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6003F59E195388D20070C39A /* GNZAppDelegate.m in Sources */,
+				72DB57E61BFD28620067436E /* GNZPageViewController.m in Sources */,
 				6003F5A7195388D20070C39A /* GNZViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
 			);
@@ -452,6 +462,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -466,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -499,7 +510,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -511,11 +522,12 @@
 			baseConfigurationReference = 9D606A8034E22A1D939142DC /* Pods-GNZSlidingSegment_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GNZSlidingSegment/GNZSlidingSegment-Prefix.pch";
 				INFOPLIST_FILE = "GNZSlidingSegment/GNZSlidingSegment-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -526,11 +538,12 @@
 			baseConfigurationReference = 816F535E05E4683F73996F90 /* Pods-GNZSlidingSegment_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "GNZSlidingSegment/GNZSlidingSegment-Prefix.pch";
 				INFOPLIST_FILE = "GNZSlidingSegment/GNZSlidingSegment-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MODULE_NAME = ExampleApp;
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -553,6 +566,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GNZSlidingSegment_Example.app/GNZSlidingSegment_Example";
 				WRAPPER_EXTENSION = xctest;
@@ -572,6 +586,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Tests/Tests-Prefix.pch";
 				INFOPLIST_FILE = "Tests/Tests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GNZSlidingSegment_Example.app/GNZSlidingSegment_Example";
 				WRAPPER_EXTENSION = xctest;

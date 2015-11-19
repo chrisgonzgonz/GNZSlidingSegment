@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  GNZSlidingSegment: 28d4b49894280b1c22ba213ce300de847fddf3c2
+  GNZSlidingSegment: 76e937198abbc09d945795c41c3e39b681ad3d1e
 
 COCOAPODS: 0.39.0

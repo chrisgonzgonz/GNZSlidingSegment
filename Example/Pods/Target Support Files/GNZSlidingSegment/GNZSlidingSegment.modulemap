@@ -1,6 +1,0 @@
-framework module GNZSlidingSegment {
-  umbrella header "GNZSlidingSegment-umbrella.h"
-
-  export *
-  module * { export * }
-}
