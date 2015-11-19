@@ -14,14 +14,15 @@
 @interface GNZViewController () <GNZSegmentPageViewControllerDatasource>
 @property (weak, nonatomic) GNZSegmentedControl *segmentedControl;
 @property (nonatomic) GNZSegmentPageViewController *segmentPageViewController;
+@property (nonatomic) UISegmentedControl *lameSegmentedControl;
 @property (nonatomic) NSArray *pageControllers;
 @end
 
 @implementation GNZViewController
 
 #pragma mark - Datasource
-- (GNZSegmentedControl *)segmentedControlForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController {
-    return self.segmentedControl;
+- (id)segmentedControlForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController {
+    return self.lameSegmentedControl;
 }
 
 
@@ -50,10 +51,10 @@
     [self.view addSubview:self.segmentPageViewController.view];
     
     
-    NSDictionary *views = @{@"topLayoutGuide": self.topLayoutGuide, @"segmentedControl": self.segmentedControl, @"pageView": self.segmentPageViewController.view};
+    NSDictionary *views = @{@"topLayoutGuide": self.topLayoutGuide, @"segmentedControl": self.lameSegmentedControl, @"pageView": self.segmentPageViewController.view};
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[segmentedControl]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[pageView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide][segmentedControl(40)][pageView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide][segmentedControl(50)]-[pageView]|" options:0 metrics:nil views:views]];
     
 }
 
@@ -86,6 +87,15 @@
         _segmentedControl = segmentControl;
     }
     return _segmentedControl;
+}
+
+- (UISegmentedControl *)lameSegmentedControl {
+    if (!_lameSegmentedControl) {
+        _lameSegmentedControl = [[UISegmentedControl alloc] initWithItems:@[@"1", @"2", @"3", @"4"]];
+        [self.view addSubview:_lameSegmentedControl];
+        _lameSegmentedControl.translatesAutoresizingMaskIntoConstraints = NO;
+    }
+    return _lameSegmentedControl;
 }
 
 @end
