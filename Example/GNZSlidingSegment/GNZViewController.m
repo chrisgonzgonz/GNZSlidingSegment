@@ -10,6 +10,7 @@
 #import <GNZSlidingSegment/GNZSegmentedControl.h>
 #import <GNZSlidingSegment/GNZSegmentPageViewController.h>
 #import "GNZPageViewController.h"
+#import <GNZSlidingSegment/UISegmentedControl+GNZCompatibility.h>
 
 @interface GNZViewController () <GNZSegmentPageViewControllerDatasource>
 @property (weak, nonatomic) GNZSegmentedControl *segmentedControl;
@@ -21,8 +22,8 @@
 @implementation GNZViewController
 
 #pragma mark - Datasource
-- (id)segmentedControlForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController {
-    return self.lameSegmentedControl;
+- (id<GNZSegment>)segmentedControlForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController {
+    return self.segmentedControl;
 }
 
 
@@ -51,10 +52,10 @@
     [self.view addSubview:self.segmentPageViewController.view];
     
     
-    NSDictionary *views = @{@"topLayoutGuide": self.topLayoutGuide, @"segmentedControl": self.lameSegmentedControl, @"pageView": self.segmentPageViewController.view};
+    NSDictionary *views = @{@"topLayoutGuide": self.topLayoutGuide, @"segmentedControl": self.segmentedControl, @"pageView": self.segmentPageViewController.view};
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[segmentedControl]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[pageView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide][segmentedControl(50)]-[pageView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide][segmentedControl(50)][pageView]|" options:0 metrics:nil views:views]];
     
 }
 
