@@ -8,28 +8,49 @@
 
 #import "GNZViewController.h"
 #import <GNZSlidingSegment/GNZSegmentedControl.h>
-#import <GNZSlidingSegment/GNZSegmentPageController.h>
+#import <GNZSlidingSegment/GNZSegmentPageViewController.h>
 #import "GNZPageViewController.h"
 
-@interface GNZViewController ()
+@interface GNZViewController () <GNZSegmentPageViewControllerDatasource>
 @property (weak, nonatomic) GNZSegmentedControl *segmentedControl;
-@property (nonatomic) GNZSegmentPageController *segmentPageController;
+@property (nonatomic) GNZSegmentPageViewController *segmentPageViewController;
 @property (nonatomic) NSArray *pageControllers;
 @end
 
 @implementation GNZViewController
 
+#pragma mark - Datasource
+- (GNZSegmentedControl *)segmentedControlForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController {
+    return self.segmentedControl;
+}
+
+
+- (UIViewController *)segmentPageController:(GNZSegmentPageViewController *)segmentPageController controllerForSegmentAtIndex:(NSUInteger)index {
+    UIViewController *vc;
+    if (index < self.pageControllers.count) {
+        vc = self.pageControllers[index];
+    }
+    return vc;
+}
+
+- (NSUInteger)segmentPageController:(GNZSegmentPageViewController *)segmentPageController segmentIndexForController:(UIViewController *)controller {
+    return [self.pageControllers indexOfObject:controller];
+}
+
+#pragma mark - Lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.segmentPageController = [[GNZSegmentPageController alloc] initWithSegmentedControl:self.segmentedControl andChildViewControllers:self.pageControllers];
+    self.segmentPageViewController = [GNZSegmentPageViewController new];
+    self.segmentPageViewController.dataSource = self;
     
-    [self.segmentPageController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.view addSubview:self.segmentPageController.view];
+    [self.segmentPageViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addSubview:self.segmentPageViewController.view];
     
     
-    NSDictionary *views = @{@"topLayoutGuide": self.topLayoutGuide, @"segmentedControl": self.segmentedControl, @"pageView": self.segmentPageController.view};
+    NSDictionary *views = @{@"topLayoutGuide": self.topLayoutGuide, @"segmentedControl": self.segmentedControl, @"pageView": self.segmentPageViewController.view};
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[segmentedControl]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[pageView]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide][segmentedControl(40)][pageView]|" options:0 metrics:nil views:views]];
@@ -45,17 +66,22 @@
         GNZPageViewController *page2 =[[GNZPageViewController alloc] initWithNibName:NSStringFromClass([GNZPageViewController class]) bundle:nil];
         page2.view.backgroundColor = [UIColor purpleColor];
         page2.pageNumber = 2;
-        _pageControllers = @[page1, page2];
+        
+        GNZPageViewController *page3 =[[GNZPageViewController alloc] initWithNibName:NSStringFromClass([GNZPageViewController class]) bundle:nil];
+        page3.view.backgroundColor = [UIColor redColor];
+        page3.pageNumber = 3;
+        _pageControllers = @[page1, page2, page3];
     }
     return _pageControllers;
 }
 
 - (GNZSegmentedControl *)segmentedControl {
     if (!_segmentedControl) {
-        GNZSegmentedControl *segmentControl = [[GNZSegmentedControl alloc] initWithSegmentCount:2 options:@{GNZSegmentOptionControlBackgroundColor: [UIColor colorWithRed:244/255.0 green:245/255.0 blue:245/255.0 alpha:1.0], GNZSegmentOptionDefaultSegmentTintColor: [UIColor colorWithRed:166/255.0 green:166/255.0 blue:166/255.0 alpha:1.0], GNZSegmentOptionSelectedSegmentTintColor: [UIColor colorWithRed: 44/255.0 green: 54/255.0 blue: 67/255.0 alpha:1.0]}];
+        GNZSegmentedControl *segmentControl = [[GNZSegmentedControl alloc] initWithSegmentCount:3 options:@{GNZSegmentOptionControlBackgroundColor: [UIColor colorWithRed:244/255.0 green:245/255.0 blue:245/255.0 alpha:1.0], GNZSegmentOptionDefaultSegmentTintColor: [UIColor colorWithRed:166/255.0 green:166/255.0 blue:166/255.0 alpha:1.0], GNZSegmentOptionSelectedSegmentTintColor: [UIColor colorWithRed: 44/255.0 green: 54/255.0 blue: 67/255.0 alpha:1.0]}];
         segmentControl.translatesAutoresizingMaskIntoConstraints = NO;
         [segmentControl setTitle:@"Segment 1" forSegmentAtIndex:0];
         [segmentControl setTitle:@"Segment 2" forSegmentAtIndex:1];
+        [segmentControl setTitle:@"Segment 3" forSegmentAtIndex:2];
         [self.view addSubview:segmentControl];
         _segmentedControl = segmentControl;
     }
