@@ -13,7 +13,7 @@ extern NSString * const GNZSegmentOptionControlBackgroundColor;
 extern NSString * const GNZSegmentOptionSelectedSegmentTintColor;
 extern NSString * const GNZSegmentOptionDefaultSegmentTintColor;
 
-@interface GNZSegmentedControl : UIControl <GNZSegment>
+@interface GNZSegmentedControl : UIControl <GNZSegment, UIScrollViewDelegate>
 @property (nonatomic) NSUInteger selectedSegmentIndex;
 - (instancetype)initWithSegmentCount:(NSUInteger)count options:(NSDictionary *)segmentOptions;
 - (void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)segment;
