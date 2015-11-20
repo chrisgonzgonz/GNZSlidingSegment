@@ -17,8 +17,26 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 @property (nonatomic) UIColor *controlBackgroundColor;
 @property (nonatomic) UIColor *segmentDefaultColor;
 @property (nonatomic) UIColor *segmentSelectedColor;
+@property (weak, nonatomic) UIView *selectionIndicator;
+@property (nonatomic) NSMutableArray *segmentIndicatorConstraints;
 @end
 @implementation GNZSegmentedControl
+
+- (void)updateSegmentIndicatorPosition:(BOOL)rightDirection {
+//    NSArray *highPriorities = [self.segmentIndicatorConstraints filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"priority = %@", @(UILayoutPriorityDefaultHigh)]];
+//    NSAssert(highPriorities.count <= 1, @"should be no more than 1 high priority constraint");
+//    [highPriorities.firstObject setPriority:UILayoutPriorityDefaultLow];
+//    [self.segmentIndicatorConstraints[self.selectedSegmentIndex] setPriority:UILayoutPriorityDefaultHigh];
+    [UIView animateWithDuration:0.3 animations:^{
+        [self.segmentIndicatorConstraints[self.selectedSegmentIndex] setConstant:rightDirection ? self.frame.size.width/(float)self.segments.count : -1 * self.frame.size.width/(float)self.segments.count];
+        [self layoutIfNeeded];
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.2 animations:^{
+            [self.segmentIndicatorConstraints[self.selectedSegmentIndex] setConstant:0.0];
+            [self layoutIfNeeded];
+        }];
+    }];
+}
 
 #pragma mark - Initializers
 - (instancetype)initWithFrame:(CGRect)frame {
@@ -31,6 +49,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
         _controlBackgroundColor = segmentOptions[GNZSegmentOptionControlBackgroundColor];
         _segmentDefaultColor = segmentOptions[GNZSegmentOptionDefaultSegmentTintColor];
         _segmentSelectedColor = segmentOptions[GNZSegmentOptionSelectedSegmentTintColor];
+        _segmentIndicatorConstraints = [NSMutableArray new];
         [self setupSegmentsWithCount:count];
     }
     return self;
@@ -61,7 +80,19 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     UIButton *finalButton = self.segments.lastObject;
     NSDictionary *views = NSDictionaryOfVariableBindings(finalButton);
     [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[finalButton]|" options:0 metrics:@{@"buttonWidth": @(buttonWidth)} views:views]];
-    self.selectedSegmentIndex = 0;
+    _selectedSegmentIndex = 0;
+    [self activateSelectedSegment];
+    
+    for (UIButton *button in self.segments) {
+        NSLayoutConstraint *segmentCenterConstraint = [NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:button attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
+        segmentCenterConstraint.priority = UILayoutPriorityDefaultLow;
+        [self addConstraint:segmentCenterConstraint];
+        [self.segmentIndicatorConstraints addObject:segmentCenterConstraint];
+    }
+    [self.segmentIndicatorConstraints.firstObject setPriority:UILayoutPriorityDefaultHigh];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:5.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0]];
 }
 
 - (UIButton *)selectedSegmentButton {
@@ -82,12 +113,26 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 #pragma mark - Overrides
 - (void)setSelectedSegmentIndex:(NSUInteger)selectedSegmentIndex {
     if (![self validSegmentIndex:selectedSegmentIndex]) return;
+    [self.segmentIndicatorConstraints[_selectedSegmentIndex] setPriority:UILayoutPriorityDefaultLow];
     
+    BOOL rightDirection = selectedSegmentIndex > _selectedSegmentIndex;
     [self deactivateSelectedSegment];
     _selectedSegmentIndex = selectedSegmentIndex;
+    [self.segmentIndicatorConstraints[_selectedSegmentIndex] setPriority:UILayoutPriorityDefaultHigh];
     [self activateSelectedSegment];
+    [self updateSegmentIndicatorPosition:rightDirection];
     
-//    [self sendActionsForControlEvents:UIControlEventValueChanged];
+}
+
+- (UIView *)selectionIndicator {
+    if (!_selectionIndicator) {
+        UIView *strongIndicator = [UIView new];
+        _selectionIndicator = strongIndicator;
+        _selectionIndicator.backgroundColor = [UIColor orangeColor];
+        _selectionIndicator.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:_selectionIndicator];
+    }
+    return _selectionIndicator;
 }
 
 #pragma mark - Actions
