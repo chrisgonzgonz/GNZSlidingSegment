@@ -25,20 +25,22 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 
 #pragma mark - UIScrollView Delegate 
 - (void)updateSegmentIndicatorPosition:(BOOL)rightDirection {
-    CGFloat constantDelta = self.frame.size.width/(float)self.segments.count;
-    CGFloat bounceDiff = self.frame.size.width * 0.2;
+    CGFloat constantStart = (self.frame.size.width/(float)self.segments.count)*(float)(self.selectedSegmentIndex);
+    CGFloat bounceDiff = self.frame.size.width * 0.08;
     if (!rightDirection) {
-        constantDelta *= -1.0;
         bounceDiff *= -1.0;
     }
     
+    [self layoutIfNeeded];
     [UIView animateWithDuration:0.3 animations:^{
-        self.indicatorConstraint.constant += constantDelta + bounceDiff;
+        self.indicatorConstraint.constant = constantStart + bounceDiff;
         [self layoutIfNeeded];
     } completion:^(BOOL finished) {
         [UIView animateWithDuration:0.2 animations:^{
-            self.indicatorConstraint.constant -= bounceDiff;
+            self.indicatorConstraint.constant = constantStart;
             [self layoutIfNeeded];
+        } completion:^(BOOL finished) {
+            
         }];
     }];
 }

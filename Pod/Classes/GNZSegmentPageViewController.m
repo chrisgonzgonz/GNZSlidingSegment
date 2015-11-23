@@ -10,7 +10,7 @@
 
 @interface GNZSegmentPageViewController () <UIPageViewControllerDataSource, UIPageViewControllerDelegate>
 @property (nonatomic) UIPageViewController *pageViewController;
-@property (nonatomic) id feedSelectorControl;
+@property (nonatomic) id<GNZSegment> feedSelectorControl;
 @property (nonatomic) NSUInteger currentIndex;
 @end
 @implementation GNZSegmentPageViewController
@@ -41,17 +41,9 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[pageView]|" options:0 metrics:nil views:views]];
 }
 
-//- (void)setScrollviewDelegate {
-//    for (UIView *view in self.pageViewController.view.subviews){
-//        if ([view isKindOfClass:[UIScrollView class]]){
-//            [(UIScrollView *)view setDelegate:self.feedSelectorControl];
-//        }
-//    }
-//}
-
 - (void)setupFeedSelectorControl {
     _feedSelectorControl = [self.dataSource segmentedControlForSegmentPageController:self];
-    [_feedSelectorControl addTarget:self action:@selector(feedSelectionDidChange:) forControlEvents:UIControlEventValueChanged];
+    [(id)_feedSelectorControl addTarget:self action:@selector(feedSelectionDidChange:) forControlEvents:UIControlEventValueChanged];
 }
 
 #pragma mark - Convenience
@@ -92,6 +84,8 @@
 #pragma mark - UIPageViewController Delegate 
 - (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
     NSLog(@"--- will transition");
+    self.currentIndex = [self.dataSource segmentPageController:self segmentIndexForController:pendingViewControllers.lastObject];
+    [self.feedSelectorControl  setSelectedSegmentIndex:self.currentIndex];
 }
 
 - (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
@@ -104,10 +98,10 @@
     
     if (completed) {
         NSLog(@"--- complete");
-        self.currentIndex = [self.dataSource segmentPageController:self segmentIndexForController:pageViewController.viewControllers.lastObject];
-        [self.feedSelectorControl setSelectedSegmentIndex:self.currentIndex];
     } else {
         NSLog(@"--- incomplete");
+        self.currentIndex = [self.dataSource segmentPageController:self segmentIndexForController:pageViewController.viewControllers.lastObject];
+        [self.feedSelectorControl setSelectedSegmentIndex:self.currentIndex];
     }
 
 }
