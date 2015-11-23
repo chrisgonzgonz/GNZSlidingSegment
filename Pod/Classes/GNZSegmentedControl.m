@@ -24,12 +24,6 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 @implementation GNZSegmentedControl
 
 #pragma mark - UIScrollView Delegate 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    NSLog(@"scrolling offset:%f", scrollView.contentOffset.x);
-//    self.indicatorConstraint.constant = 0.4 * (scrollView.contentOffset.x - self.frame.size.width);
-}
-
-
 - (void)updateSegmentIndicatorPosition:(BOOL)rightDirection {
     CGFloat constantDelta = self.frame.size.width/(float)self.segments.count;
     CGFloat bounceDiff = self.frame.size.width * 0.2;
@@ -94,13 +88,6 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     _selectedSegmentIndex = 0;
     [self activateSelectedSegment];
     
-//    for (UIButton *button in self.segments) {
-//        NSLayoutConstraint *segmentCenterConstraint = [NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:button attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
-//        segmentCenterConstraint.priority = UILayoutPriorityDefaultLow;
-//        [self addConstraint:segmentCenterConstraint];
-//        [self.segmentIndicatorConstraints addObject:segmentCenterConstraint];
-//    }
-//    [self.segmentIndicatorConstraints.firstObject setPriority:UILayoutPriorityDefaultHigh];
     NSLayoutConstraint *segmentCenterConstraint = [NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
     [self addConstraint:segmentCenterConstraint];
     self.indicatorConstraint = segmentCenterConstraint;
@@ -129,12 +116,10 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 #pragma mark - Overrides
 - (void)setSelectedSegmentIndex:(NSUInteger)selectedSegmentIndex {
     if (![self validSegmentIndex:selectedSegmentIndex]) return;
-//    [self.segmentIndicatorConstraints[_selectedSegmentIndex] setPriority:UILayoutPriorityDefaultLow];
     
     BOOL rightDirection = selectedSegmentIndex > _selectedSegmentIndex;
     [self deactivateSelectedSegment];
     _selectedSegmentIndex = selectedSegmentIndex;
-//    [self.segmentIndicatorConstraints[_selectedSegmentIndex] setPriority:UILayoutPriorityDefaultHigh];
     [self activateSelectedSegment];
     [self updateSegmentIndicatorPosition:rightDirection];
     

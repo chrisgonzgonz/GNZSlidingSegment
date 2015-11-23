@@ -39,16 +39,15 @@
     NSDictionary *views = @{@"pageView": _pageViewController.view};
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[pageView]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[pageView]|" options:0 metrics:nil views:views]];
-    [self setScrollviewDelegate];
 }
 
-- (void)setScrollviewDelegate {
-    for (UIView *view in self.pageViewController.view.subviews){
-        if ([view isKindOfClass:[UIScrollView class]]){
-            [(UIScrollView *)view setDelegate:self.feedSelectorControl];
-        }
-    }
-}
+//- (void)setScrollviewDelegate {
+//    for (UIView *view in self.pageViewController.view.subviews){
+//        if ([view isKindOfClass:[UIScrollView class]]){
+//            [(UIScrollView *)view setDelegate:self.feedSelectorControl];
+//        }
+//    }
+//}
 
 - (void)setupFeedSelectorControl {
     _feedSelectorControl = [self.dataSource segmentedControlForSegmentPageController:self];
