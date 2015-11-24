@@ -16,12 +16,14 @@ extern NSString * const GNZSegmentOptionSelectedSegmentTintColor;
 extern NSString * const GNZSegmentOptionDefaultSegmentTintColor;
 
 @interface GNZSegmentedControl : UIControl <GNZSegment>
+
 @property (nonatomic) NSUInteger selectedSegmentIndex;
 + (instancetype)new __attribute__((unavailable("use initWithSegmentCount:options:")));
 - (instancetype)init __attribute__((unavailable("use initWithSegmentCount:options:")));
 - (instancetype)initWithFrame:(CGRect)frame __attribute__((unavailable("use initWithSegmentCount:options:")));
 - (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((unavailable("use initWithSegmentCount:options:")));
 - (instancetype)initWithSegmentCount:(NSUInteger)count options:(NSDictionary<NSString *, UIColor *> *)segmentOptions;
+
 - (void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)segment;
 - (void)setImage:(UIImage *)image forSegmentAtIndex:(NSUInteger)segment;
 - (void)setTitle:(nullable NSString *)title andImage:(nullable UIImage *)image withSpacing:(CGFloat)spacing forSegmentAtIndex:(NSUInteger)segment;

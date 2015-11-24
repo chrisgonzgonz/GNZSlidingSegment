@@ -26,8 +26,7 @@
     return self.segmentedControl;
 }
 
-
-- (UIViewController *)segmentPageController:(GNZSegmentPageViewController *)segmentPageController controllerForSegmentAtIndex:(NSUInteger)index {
+- (UIViewController *)viewControllerForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController atIndex:(NSUInteger)index {
     UIViewController *vc;
     if (index < self.pageControllers.count) {
         vc = self.pageControllers[index];
@@ -35,9 +34,10 @@
     return vc;
 }
 
-- (NSUInteger)segmentPageController:(GNZSegmentPageViewController *)segmentPageController segmentIndexForController:(UIViewController *)controller {
-    return [self.pageControllers indexOfObject:controller];
+- (NSUInteger)numberOfPagesForSegmentPageView:(GNZSegmentPageViewController *)segmentPageController {
+    return self.pageControllers.count;
 }
+
 
 #pragma mark - Lifecycle
 
