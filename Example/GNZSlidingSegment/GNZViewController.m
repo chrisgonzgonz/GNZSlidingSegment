@@ -79,7 +79,7 @@
 
 - (GNZSegmentedControl *)segmentedControl {
     if (!_segmentedControl) {
-        GNZSegmentedControl *segmentControl = [[GNZSegmentedControl alloc] initWithSegmentCount:3 options:@{GNZSegmentOptionControlBackgroundColor: [UIColor colorWithRed:244/255.0 green:245/255.0 blue:245/255.0 alpha:1.0], GNZSegmentOptionDefaultSegmentTintColor: [UIColor colorWithRed:166/255.0 green:166/255.0 blue:166/255.0 alpha:1.0], GNZSegmentOptionSelectedSegmentTintColor: [UIColor colorWithRed: 44/255.0 green: 54/255.0 blue: 67/255.0 alpha:1.0]}];
+        GNZSegmentedControl *segmentControl = [[GNZSegmentedControl alloc] initWithSegmentCount:3 indicatorStyle:GNZIndicatorStyleElevator options:@{GNZSegmentOptionControlBackgroundColor: [UIColor colorWithRed:244/255.0 green:245/255.0 blue:245/255.0 alpha:1.0], GNZSegmentOptionDefaultSegmentTintColor: [UIColor colorWithRed:166/255.0 green:166/255.0 blue:166/255.0 alpha:1.0], GNZSegmentOptionSelectedSegmentTintColor: [UIColor colorWithRed: 44/255.0 green: 54/255.0 blue: 67/255.0 alpha:1.0]}];
         segmentControl.translatesAutoresizingMaskIntoConstraints = NO;
         [segmentControl setTitle:@"Segment 1" forSegmentAtIndex:0];
         [segmentControl setTitle:@"Segment 2" forSegmentAtIndex:1];

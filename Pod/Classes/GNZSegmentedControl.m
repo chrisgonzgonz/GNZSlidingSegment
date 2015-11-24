@@ -17,8 +17,14 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 @property (nonatomic) UIColor *controlBackgroundColor;
 @property (nonatomic) UIColor *segmentDefaultColor;
 @property (nonatomic) UIColor *segmentSelectedColor;
-@property (weak, nonatomic) UIView *selectionIndicator;
-@property (nonatomic) NSLayoutConstraint *indicatorConstraint;
+
+//default
+@property (weak, nonatomic) UIView *defaultSelectionIndicator;
+@property (nonatomic) NSLayoutConstraint *defaultIndicatorConstraint;
+
+//elevator
+@property (nonatomic) NSMutableArray<NSLayoutConstraint *> *elevatorHeightConstraints;
+
 @property (nonatomic) GNZIndicatorStyle style;
 @end
 @implementation GNZSegmentedControl
@@ -32,6 +38,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 - (instancetype)initWithSegmentCount:(NSUInteger)count indicatorStyle:(GNZIndicatorStyle)style options:(NSDictionary<NSString *,UIColor *> *)segmentOptions {
     if (self = [super initWithFrame:CGRectZero]) {
         _style = style;
+        _elevatorHeightConstraints = [NSMutableArray new];
         _controlBackgroundColor = segmentOptions[GNZSegmentOptionControlBackgroundColor];
         _segmentDefaultColor = segmentOptions[GNZSegmentOptionDefaultSegmentTintColor];
         _segmentSelectedColor = segmentOptions[GNZSegmentOptionSelectedSegmentTintColor];
@@ -47,7 +54,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     for (NSUInteger count = 0; count < segmentCount; count++) {
         UIButton *previousButton = self.segments.lastObject;
         UIButton *currentButton = [self configuredSegmentButton];
-        
+
         
         [self addConstraint:[NSLayoutConstraint constraintWithItem:currentButton attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeWidth multiplier:1.0/(float)segmentCount constant:0.0]];
         NSDictionary *views;
@@ -68,15 +75,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     _selectedSegmentIndex = 0;
     [self activateSelectedSegment];
     
-    
-    NSLayoutConstraint *segmentRightConstraint = [NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
-    [self addConstraint:segmentRightConstraint];
-    self.indicatorConstraint = segmentRightConstraint;
-    
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:5.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0]];
-    [self layoutIfNeeded];
+    [self setIndicatorConstraintsForStyle:self.style];
 }
 
 - (void)setIndicatorConstraintsForStyle:(GNZIndicatorStyle)style {
@@ -91,17 +90,39 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 }
 
 - (void)createDefaultIndicatorConstraints {
-    NSLayoutConstraint *segmentRightConstraint = [NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
+    NSLayoutConstraint *segmentRightConstraint = [NSLayoutConstraint constraintWithItem:self.defaultSelectionIndicator attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
     [self addConstraint:segmentRightConstraint];
-    self.indicatorConstraint = segmentRightConstraint;
+    self.defaultIndicatorConstraint = segmentRightConstraint;
     
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:5.0]];
-    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.defaultSelectionIndicator attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.defaultSelectionIndicator attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:5.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.defaultSelectionIndicator attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0]];
     [self layoutIfNeeded];
 }
 
 - (void)createElevatorIndicatorConstraints {
+    for (UIView *segmentView in self.segments) {
+        UIView *segmentIndicator = [self selectionIndicator];
+        [segmentView addSubview:segmentIndicator];
+//        height
+        NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:segmentIndicator attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0.0];
+        [segmentView addConstraint:heightConstraint];
+        [self.elevatorHeightConstraints addObject:heightConstraint];
+
+        
+        NSLayoutConstraint *bottomConstraint = [NSLayoutConstraint constraintWithItem:segmentIndicator attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:segmentView attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0];
+        [segmentView addConstraint:bottomConstraint];
+        
+        NSLayoutConstraint *widthConstraint = [NSLayoutConstraint constraintWithItem:segmentIndicator attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:segmentView attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0];
+        [segmentView addConstraint:widthConstraint];
+        
+        NSLayoutConstraint *xConstraint = [NSLayoutConstraint constraintWithItem:segmentIndicator attribute:NSLayoutAttributeCenterX relatedBy:NSLayoutRelationEqual toItem:segmentView attribute:NSLayoutAttributeCenterX multiplier:1.0 constant:0.0];
+        [segmentView addConstraint:xConstraint];
+        
+//        [segmentView layoutIfNeeded];
+    }
+    
+    self.elevatorHeightConstraints.firstObject.constant = 5;
     
 }
 
@@ -129,15 +150,24 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     [self activateSelectedSegment];
 }
 
-- (UIView *)selectionIndicator {
-    if (!_selectionIndicator) {
+- (UIView *)defaultSelectionIndicator {
+    if (!_defaultSelectionIndicator) {
         UIView *strongIndicator = [UIView new];
-        _selectionIndicator = strongIndicator;
-        _selectionIndicator.backgroundColor = [UIColor orangeColor];
-        _selectionIndicator.translatesAutoresizingMaskIntoConstraints = NO;
-        [self addSubview:_selectionIndicator];
+        _defaultSelectionIndicator = strongIndicator;
+        _defaultSelectionIndicator.backgroundColor = [UIColor orangeColor];
+        _defaultSelectionIndicator.translatesAutoresizingMaskIntoConstraints = NO;
+        [self addSubview:_defaultSelectionIndicator];
     }
-    return _selectionIndicator;
+    return _defaultSelectionIndicator;
+}
+
+- (UIView *)selectionIndicator {
+    UIView *newIndicator = [UIView new];
+    newIndicator.backgroundColor = [UIColor blackColor];
+    newIndicator.translatesAutoresizingMaskIntoConstraints = NO;
+//    newIndicator.layer.shouldRasterize = NO;
+//    newIndicator.contentScaleFactor = 0.1;
+    return newIndicator;
 }
 
 #pragma mark - Actions
@@ -196,7 +226,16 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     self.selectedSegmentIndex = [self currentPageForScrollView:scrollView];
-    self.indicatorConstraint.constant = (scrollView.contentOffset.x/scrollView.contentSize.width)*self.frame.size.width;
+    self.defaultIndicatorConstraint.constant = (scrollView.contentOffset.x/scrollView.contentSize.width)*self.frame.size.width;
+
+    for (int i = 0; i < self.elevatorHeightConstraints.count; i++) {
+        CGFloat segmentPosition = i*(self.frame.size.width);
+        CGFloat distanceFromViewport = fabs(segmentPosition-scrollView.contentOffset.x);
+        CGFloat percentHeight = 1-(distanceFromViewport/self.frame.size.width);
+        NSLayoutConstraint *constraint = self.elevatorHeightConstraints[i];
+        CGFloat constant =  percentHeight*5;
+        constraint.constant = MAX(0, constant);
+    }
 }
 
 - (NSInteger) currentPageForScrollView:(UIScrollView *)scrollView
