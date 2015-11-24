@@ -19,6 +19,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 @property (nonatomic) UIColor *segmentSelectedColor;
 @property (weak, nonatomic) UIView *selectionIndicator;
 @property (nonatomic) NSLayoutConstraint *indicatorConstraint;
+@property (nonatomic) GNZIndicatorStyle style;
 @end
 @implementation GNZSegmentedControl
 
@@ -28,8 +29,9 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     return nil;
 }
 
-- (instancetype)initWithSegmentCount:(NSUInteger)count options:(NSDictionary *)segmentOptions{
+- (instancetype)initWithSegmentCount:(NSUInteger)count indicatorStyle:(GNZIndicatorStyle)style options:(NSDictionary<NSString *,UIColor *> *)segmentOptions {
     if (self = [super initWithFrame:CGRectZero]) {
+        _style = style;
         _controlBackgroundColor = segmentOptions[GNZSegmentOptionControlBackgroundColor];
         _segmentDefaultColor = segmentOptions[GNZSegmentOptionDefaultSegmentTintColor];
         _segmentSelectedColor = segmentOptions[GNZSegmentOptionSelectedSegmentTintColor];
@@ -67,14 +69,40 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     [self activateSelectedSegment];
     
     
-    NSLayoutConstraint *segmentCenterConstraint = [NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
-    [self addConstraint:segmentCenterConstraint];
-    self.indicatorConstraint = segmentCenterConstraint;
+    NSLayoutConstraint *segmentRightConstraint = [NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
+    [self addConstraint:segmentRightConstraint];
+    self.indicatorConstraint = segmentRightConstraint;
     
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:5.0]];
     [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0]];
     [self layoutIfNeeded];
+}
+
+- (void)setIndicatorConstraintsForStyle:(GNZIndicatorStyle)style {
+    switch (style) {
+        case GNZIndicatorStyleElevator:
+            [self createElevatorIndicatorConstraints];
+            break;
+        default:
+            [self createDefaultIndicatorConstraints];
+            break;
+    }
+}
+
+- (void)createDefaultIndicatorConstraints {
+    NSLayoutConstraint *segmentRightConstraint = [NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
+    [self addConstraint:segmentRightConstraint];
+    self.indicatorConstraint = segmentRightConstraint;
+    
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeWidth relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeWidth multiplier:1.0 constant:0.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:5.0]];
+    [self addConstraint:[NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0]];
+    [self layoutIfNeeded];
+}
+
+- (void)createElevatorIndicatorConstraints {
+    
 }
 
 - (UIButton *)selectedSegmentButton {

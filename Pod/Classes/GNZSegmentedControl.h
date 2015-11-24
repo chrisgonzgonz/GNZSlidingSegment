@@ -15,6 +15,11 @@ extern NSString * const GNZSegmentOptionControlBackgroundColor;
 extern NSString * const GNZSegmentOptionSelectedSegmentTintColor;
 extern NSString * const GNZSegmentOptionDefaultSegmentTintColor;
 
+typedef NS_ENUM(NSUInteger, GNZIndicatorStyle) {
+    GNZIndicatorStyleDefault,
+    GNZIndicatorStyleElevator
+};
+
 @interface GNZSegmentedControl : UIControl <GNZSegment>
 
 @property (nonatomic) NSUInteger selectedSegmentIndex;
@@ -22,7 +27,7 @@ extern NSString * const GNZSegmentOptionDefaultSegmentTintColor;
 - (instancetype)init __attribute__((unavailable("use initWithSegmentCount:options:")));
 - (instancetype)initWithFrame:(CGRect)frame __attribute__((unavailable("use initWithSegmentCount:options:")));
 - (instancetype)initWithCoder:(NSCoder *)aDecoder __attribute__((unavailable("use initWithSegmentCount:options:")));
-- (instancetype)initWithSegmentCount:(NSUInteger)count options:(NSDictionary<NSString *, UIColor *> *)segmentOptions;
+- (instancetype)initWithSegmentCount:(NSUInteger)count indicatorStyle:(GNZIndicatorStyle)style options:(NSDictionary<NSString *, UIColor *> *)segmentOptions;
 
 - (void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)segment;
 - (void)setImage:(UIImage *)image forSegmentAtIndex:(NSUInteger)segment;
