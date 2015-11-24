@@ -117,9 +117,9 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     NSUInteger previousSelectedSegmentIndex = self.selectedSegmentIndex;
     NSUInteger currentSelectedIndex = [self.segments indexOfObject:sender];
     
-    self.selectedSegmentIndex = currentSelectedIndex;
+    _selectedSegmentIndex = currentSelectedIndex;
     
-    if (self.selectedSegmentIndex != previousSelectedSegmentIndex)
+    if (currentSelectedIndex != previousSelectedSegmentIndex)
     {
         [self sendActionsForControlEvents:UIControlEventValueChanged];
     }
@@ -167,8 +167,19 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"%@", @(scrollView.contentOffset.x));
+    self.selectedSegmentIndex = [self currentPageForScrollView:scrollView];
     self.indicatorConstraint.constant = (scrollView.contentOffset.x/scrollView.contentSize.width)*self.frame.size.width;
+}
+
+- (NSInteger) currentPageForScrollView:(UIScrollView *)scrollView
+{
+    CGFloat currentX = scrollView.contentOffset.x+self.frame.size.width/2;
+    CGFloat currentPage = (currentX/self.frame.size.width);
+    if (currentPage < 0)
+        currentPage = 0;
+    if (currentPage >= self.segments.count)
+        currentPage = self.segments.count-1;
+    return currentPage;
 }
 
 
