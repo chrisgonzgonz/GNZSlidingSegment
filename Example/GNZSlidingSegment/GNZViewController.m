@@ -72,18 +72,18 @@
         GNZPageViewController *page3 =[[GNZPageViewController alloc] initWithNibName:NSStringFromClass([GNZPageViewController class]) bundle:nil];
         page3.view.backgroundColor = [UIColor redColor];
         page3.pageNumber = 3;
-        _pageControllers = @[page1, page2];
+        _pageControllers = @[page1, page2, page3];
     }
     return _pageControllers;
 }
 
 - (GNZSegmentedControl *)segmentedControl {
     if (!_segmentedControl) {
-        GNZSegmentedControl *segmentControl = [[GNZSegmentedControl alloc] initWithSegmentCount:2 options:@{GNZSegmentOptionControlBackgroundColor: [UIColor colorWithRed:244/255.0 green:245/255.0 blue:245/255.0 alpha:1.0], GNZSegmentOptionDefaultSegmentTintColor: [UIColor colorWithRed:166/255.0 green:166/255.0 blue:166/255.0 alpha:1.0], GNZSegmentOptionSelectedSegmentTintColor: [UIColor colorWithRed: 44/255.0 green: 54/255.0 blue: 67/255.0 alpha:1.0]}];
+        GNZSegmentedControl *segmentControl = [[GNZSegmentedControl alloc] initWithSegmentCount:3 options:@{GNZSegmentOptionControlBackgroundColor: [UIColor colorWithRed:244/255.0 green:245/255.0 blue:245/255.0 alpha:1.0], GNZSegmentOptionDefaultSegmentTintColor: [UIColor colorWithRed:166/255.0 green:166/255.0 blue:166/255.0 alpha:1.0], GNZSegmentOptionSelectedSegmentTintColor: [UIColor colorWithRed: 44/255.0 green: 54/255.0 blue: 67/255.0 alpha:1.0]}];
         segmentControl.translatesAutoresizingMaskIntoConstraints = NO;
         [segmentControl setTitle:@"Segment 1" forSegmentAtIndex:0];
         [segmentControl setTitle:@"Segment 2" forSegmentAtIndex:1];
-//        [segmentControl setTitle:@"Segment 3" forSegmentAtIndex:2];
+        [segmentControl setTitle:@"Segment 3" forSegmentAtIndex:2];
         [self.view addSubview:segmentControl];
         _segmentedControl = segmentControl;
     }

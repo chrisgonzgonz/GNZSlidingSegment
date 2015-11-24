@@ -19,11 +19,9 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 @property (nonatomic) UIColor *segmentSelectedColor;
 @property (weak, nonatomic) UIView *selectionIndicator;
 @property (nonatomic) NSLayoutConstraint *indicatorConstraint;
-@property (nonatomic) NSMutableArray *segmentIndicatorConstraints;
 @end
 @implementation GNZSegmentedControl
 
-#pragma mark - UIScrollView Delegate 
 - (void)updateSegmentIndicatorPosition:(BOOL)rightDirection {
     CGFloat constantStart = (self.frame.size.width/(float)self.segments.count)*(float)(self.selectedSegmentIndex);
     CGFloat bounceDiff = self.frame.size.width * 0.08;
@@ -32,15 +30,15 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     }
     
     [self layoutIfNeeded];
-    [UIView animateWithDuration:0.3 animations:^{
+    [UIView animateWithDuration:0.2 animations:^{
         self.indicatorConstraint.constant = constantStart + bounceDiff;
         [self layoutIfNeeded];
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.2 animations:^{
+        [UIView animateWithDuration:0.1 animations:^{
             self.indicatorConstraint.constant = constantStart;
             [self layoutIfNeeded];
         } completion:^(BOOL finished) {
-            
+            NSLog(@"animation finished");
         }];
     }];
 }
@@ -56,7 +54,6 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
         _controlBackgroundColor = segmentOptions[GNZSegmentOptionControlBackgroundColor];
         _segmentDefaultColor = segmentOptions[GNZSegmentOptionDefaultSegmentTintColor];
         _segmentSelectedColor = segmentOptions[GNZSegmentOptionSelectedSegmentTintColor];
-        _segmentIndicatorConstraints = [NSMutableArray new];
         [self setupSegmentsWithCount:count];
     }
     return self;
@@ -65,7 +62,6 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 #pragma mark - Layout and Defaults
 - (void)setupSegmentsWithCount:(NSUInteger)segmentCount {
     self.backgroundColor = self.controlBackgroundColor;
-    CGFloat buttonWidth = self.frame.size.width/(float)segmentCount;
     self.segments = [NSMutableArray new];
     for (NSUInteger count = 0; count < segmentCount; count++) {
         UIButton *previousButton = self.segments.lastObject;
@@ -86,9 +82,11 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     }
     UIButton *finalButton = self.segments.lastObject;
     NSDictionary *views = NSDictionaryOfVariableBindings(finalButton);
-    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[finalButton]|" options:0 metrics:@{@"buttonWidth": @(buttonWidth)} views:views]];
+    [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[finalButton]|" options:0 metrics:nil views:views]];
+    
     _selectedSegmentIndex = 0;
     [self activateSelectedSegment];
+    
     
     NSLayoutConstraint *segmentCenterConstraint = [NSLayoutConstraint constraintWithItem:self.selectionIndicator attribute:NSLayoutAttributeRight relatedBy:NSLayoutRelationEqual toItem:self.segments.firstObject attribute:NSLayoutAttributeRight multiplier:1.0 constant:0];
     [self addConstraint:segmentCenterConstraint];

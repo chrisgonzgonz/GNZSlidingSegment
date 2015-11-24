@@ -94,6 +94,8 @@
         NSLog(@"--- did finish");
     } else {
         NSLog(@"--- not finish");
+        self.currentIndex = [self.dataSource segmentPageController:self segmentIndexForController:pageViewController.viewControllers.lastObject];
+        [self.feedSelectorControl setSelectedSegmentIndex:self.currentIndex];
     }
     
     if (completed) {
