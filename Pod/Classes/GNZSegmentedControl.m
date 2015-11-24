@@ -22,27 +22,6 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 @end
 @implementation GNZSegmentedControl
 
-- (void)updateSegmentIndicatorPosition:(BOOL)rightDirection {
-    CGFloat constantStart = (self.frame.size.width/(float)self.segments.count)*(float)(self.selectedSegmentIndex);
-    CGFloat bounceDiff = self.frame.size.width * 0.08;
-    if (!rightDirection) {
-        bounceDiff *= -1.0;
-    }
-    
-    [self layoutIfNeeded];
-    [UIView animateWithDuration:0.2 animations:^{
-        self.indicatorConstraint.constant = constantStart + bounceDiff;
-        [self layoutIfNeeded];
-    } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.1 animations:^{
-            self.indicatorConstraint.constant = constantStart;
-            [self layoutIfNeeded];
-        } completion:^(BOOL finished) {
-            NSLog(@"animation finished");
-        }];
-    }];
-}
-
 #pragma mark - Initializers
 - (instancetype)initWithFrame:(CGRect)frame {
     NSAssert(NO, @"use initWithSegmentCount");
@@ -117,12 +96,9 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 - (void)setSelectedSegmentIndex:(NSUInteger)selectedSegmentIndex {
     if (![self validSegmentIndex:selectedSegmentIndex]) return;
     
-    BOOL rightDirection = selectedSegmentIndex > _selectedSegmentIndex;
     [self deactivateSelectedSegment];
     _selectedSegmentIndex = selectedSegmentIndex;
     [self activateSelectedSegment];
-    [self updateSegmentIndicatorPosition:rightDirection];
-    
 }
 
 - (UIView *)selectionIndicator {
@@ -185,6 +161,14 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     UIButton *currentSelected = self.segments[_selectedSegmentIndex];
     [currentSelected setTitleColor:self.segmentSelectedColor forState:UIControlStateNormal];
     [currentSelected setTintColor:self.segmentSelectedColor];
+}
+
+#pragma mark - Scroll View Delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    NSLog(@"%@", @(scrollView.contentOffset.x));
+    self.indicatorConstraint.constant = (scrollView.contentOffset.x/scrollView.contentSize.width)*self.frame.size.width;
 }
 
 

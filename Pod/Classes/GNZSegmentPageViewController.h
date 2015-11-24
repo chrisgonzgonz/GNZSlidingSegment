@@ -13,8 +13,8 @@
 
 @protocol GNZSegmentPageViewControllerDatasource <NSObject>
 - (id<GNZSegment>)segmentedControlForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController;
-- (UIViewController *)segmentPageController:(GNZSegmentPageViewController *)segmentPageController controllerForSegmentAtIndex:(NSUInteger)index;
-- (NSUInteger)segmentPageController:(GNZSegmentPageViewController *)segmentPageController segmentIndexForController:(UIViewController *)controller;
+- (UIViewController *)viewControllerForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController atIndex:(NSUInteger)index;
+- (NSUInteger)numberOfPagesForSegmentPageView:(GNZSegmentPageViewController *)segmentPageController;
 @end
 
 @interface GNZSegmentPageViewController : UIViewController
