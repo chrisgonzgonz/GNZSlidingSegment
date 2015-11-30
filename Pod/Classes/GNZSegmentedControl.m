@@ -18,6 +18,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 @property (nonatomic) UIColor *controlBackgroundColor;
 @property (nonatomic) UIColor *segmentDefaultColor;
 @property (nonatomic) UIColor *segmentSelectedColor;
+@property (nonatomic) GNZIndicatorStyle style;
 
 //default
 @property (weak, nonatomic) UIView *defaultSelectionIndicator;
@@ -26,7 +27,6 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 //elevator
 @property (nonatomic) NSMutableArray<NSLayoutConstraint *> *elevatorHeightConstraints;
 
-@property (nonatomic) GNZIndicatorStyle style;
 @end
 @implementation GNZSegmentedControl
 
@@ -222,13 +222,24 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     [currentSelected setTintColor:self.segmentSelectedColor];
 }
 
-#pragma mark - Scroll View Delegate
+- (void)adjustIndicatorForScroll:(UIScrollView *)scrollView {
+    switch (self.style) {
+        case GNZIndicatorStyleElevator:
+            [self adjustElevatorIndicatorsWithScroll:scrollView];
+            break;
+            
+        default:
+            [self adjustDefaultIndicatorWithScroll:scrollView];
+            break;
+    }
+}
 
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
+- (void)adjustDefaultIndicatorWithScroll:(UIScrollView *)scrollView {
     self.selectedSegmentIndex = [self currentPageForScrollView:scrollView];
     self.defaultIndicatorConstraint.constant = (scrollView.contentOffset.x/scrollView.contentSize.width)*self.frame.size.width;
+}
 
+- (void)adjustElevatorIndicatorsWithScroll:(UIScrollView *)scrollView {
     for (int i = 0; i < self.elevatorHeightConstraints.count; i++) {
         CGFloat segmentPosition = i*(self.frame.size.width);
         CGFloat distanceFromViewport = fabs(segmentPosition-scrollView.contentOffset.x);
@@ -238,6 +249,14 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
         CGFloat constant =  percentHeight*5;
         constraint.constant = MAX(0, constant);
     }
+}
+
+#pragma mark - Scroll View Delegate
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    self.selectedSegmentIndex = [self currentPageForScrollView:scrollView];
+    [self adjustIndicatorForScroll:scrollView];
 }
 
 - (NSInteger) currentPageForScrollView:(UIScrollView *)scrollView
