@@ -18,6 +18,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 @property (nonatomic) UIColor *controlBackgroundColor;
 @property (nonatomic) UIColor *segmentDefaultColor;
 @property (nonatomic) UIColor *segmentSelectedColor;
+@property (nonatomic) UIColor *hairlineShadowColor;
 @property (nonatomic) GNZIndicatorStyle style;
 
 //default
@@ -72,6 +73,16 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     [self activateSelectedSegment];
     
     [self setIndicatorConstraintsForStyle:self.style];
+    [self addHairlineShadow];
+}
+
+-(void)addHairlineShadow
+{
+    [self.layer setShadowOffset:CGSizeMake(0, 1.0f/UIScreen.mainScreen.scale)];
+    [self.layer setShadowRadius:0];
+    [self.layer setShadowColor:[UIColor blackColor].CGColor];
+    [self.layer setShadowOpacity:0.25f];
+    
 }
 
 - (void)setIndicatorConstraintsForStyle:(GNZIndicatorStyle)style {

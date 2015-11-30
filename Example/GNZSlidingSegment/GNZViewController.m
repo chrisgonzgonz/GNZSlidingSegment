@@ -46,7 +46,6 @@
     [super viewDidLoad];
     
     self.segmentPageViewController = [GNZSlidingSegmentViewController new];
-    self.segmentPageViewController.dataSource = self;
     
     [self.segmentPageViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
     [self.view addSubview:self.segmentPageViewController.view];
@@ -57,12 +56,13 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[pageView]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide][segmentedControl(50)][pageView]|" options:0 metrics:nil views:views]];
     
+    self.segmentPageViewController.dataSource = self;
 }
 
 - (NSArray *)pageControllers {
     if (!_pageControllers) {
         GNZPageViewController *page1 = [[GNZPageViewController alloc] initWithNibName:NSStringFromClass([GNZPageViewController class]) bundle:nil];
-        page1.view.backgroundColor = [UIColor greenColor];
+        page1.view.backgroundColor = [UIColor grayColor];
         page1.pageNumber = 1;
         
         GNZPageViewController *page2 =[[GNZPageViewController alloc] initWithNibName:NSStringFromClass([GNZPageViewController class]) bundle:nil];
