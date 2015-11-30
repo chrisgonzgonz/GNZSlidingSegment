@@ -14,7 +14,6 @@
 @protocol GNZSlidingSegmentViewControllerDatasource <NSObject>
 - (id<GNZSegment>)segmentedControlForSlidingSegmentViewController:(GNZSlidingSegmentViewController *)segmentPageController;
 - (UIViewController *)slidingSegmentViewController:(GNZSlidingSegmentViewController *)slidingSegmentViewController viewControllerForSegmentAtIndex:(NSUInteger)index;
-- (NSUInteger)numberOfSegmentsForSlidingSegmentViewController:(GNZSlidingSegmentViewController *)slidingSegmentViewController;
 @end
 
 @interface GNZSlidingSegmentViewController : UIViewController
