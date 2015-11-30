@@ -227,6 +227,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
         CGFloat segmentPosition = i*(self.frame.size.width);
         CGFloat distanceFromViewport = fabs(segmentPosition-scrollView.contentOffset.x);
         CGFloat percentHeight = 1-(distanceFromViewport/self.frame.size.width);
+        percentHeight = percentHeight*2-1;
         NSLayoutConstraint *constraint = self.elevatorHeightConstraints[i];
         CGFloat constant =  percentHeight*5;
         constraint.constant = MAX(0, constant);
