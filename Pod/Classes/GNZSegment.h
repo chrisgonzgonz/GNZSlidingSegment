@@ -12,5 +12,6 @@
 
 - (NSUInteger)selectedSegmentIndex;
 - (void)setSelectedSegmentIndex:(NSUInteger)index;
+- (NSUInteger)numberOfSegments;
 
 @end

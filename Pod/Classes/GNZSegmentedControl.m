@@ -13,6 +13,7 @@ NSString * const GNZSegmentOptionSelectedSegmentTintColor = @"SEGMENT_OPTION_SEL
 NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFAULT_COLOR";
 
 @interface GNZSegmentedControl ()
+@property (nonatomic) NSUInteger selectedSegmentIndex;
 @property (nonatomic) NSMutableArray *segments;
 @property (nonatomic) UIColor *controlBackgroundColor;
 @property (nonatomic) UIColor *segmentDefaultColor;
@@ -136,7 +137,11 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     return button;
 }
 
-#pragma mark - Overrides
+#pragma mark - GNZSegment Protocol
+- (NSUInteger)numberOfSegments {
+    return self.segments.count;
+}
+
 - (void)setSelectedSegmentIndex:(NSUInteger)selectedSegmentIndex {
     if (![self validSegmentIndex:selectedSegmentIndex]) return;
     
@@ -144,6 +149,9 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     _selectedSegmentIndex = selectedSegmentIndex;
     [self activateSelectedSegment];
 }
+
+
+#pragma mark - Overrides
 
 - (UIView *)defaultSelectionIndicator {
     if (!_defaultSelectionIndicator) {
@@ -160,8 +168,6 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     UIView *newIndicator = [UIView new];
     newIndicator.backgroundColor = [UIColor blackColor];
     newIndicator.translatesAutoresizingMaskIntoConstraints = NO;
-//    newIndicator.layer.shouldRasterize = NO;
-//    newIndicator.contentScaleFactor = 0.1;
     return newIndicator;
 }
 
@@ -244,6 +250,5 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
         currentPage = self.segments.count-1;
     return currentPage;
 }
-
 
 @end

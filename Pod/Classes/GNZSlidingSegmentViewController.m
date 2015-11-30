@@ -9,43 +9,19 @@
 #import "GNZSlidingSegmentViewController.h"
 
 @interface GNZSlidingSegmentViewController ()
-@property (nonatomic) UIPageViewController *pageViewController;
-@property (nonatomic) UIScrollView *scrollView;
+@property (weak, nonatomic) UIScrollView *scrollView;
 @property (nonatomic) id<GNZSegment> feedSelectorControl;
-@property (nonatomic) NSUInteger currentIndex;
 @end
 @implementation GNZSlidingSegmentViewController
 
-#pragma mark - Lifecycle
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    NSAssert(self.dataSource, @"datasource should exist");
-    [self setupFeedSelectorControl];
-    [self setupPageViewController];
-}
-
 #pragma mark - Setup
-- (void)setupPageViewController {
-    self.scrollView = [[UIScrollView alloc] init];
-    self.scrollView.backgroundColor = [UIColor colorWithRed:224 green:224 blue:224 alpha:1.0];
-    self.scrollView.translatesAutoresizingMaskIntoConstraints = NO;
-    self.scrollView.pagingEnabled = YES;
-    self.scrollView.showsHorizontalScrollIndicator = NO;
-    self.scrollView.showsVerticalScrollIndicator = NO;
-    self.scrollView.delegate = self.feedSelectorControl;
-    [self.view addSubview:self.scrollView];
-    
-    
-    
-    NSDictionary *views = @{@"scrollView": self.scrollView};
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[scrollView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[scrollView]|" options:0 metrics:nil views:views]];
-    [self layoutSegmentViewControllers];
-}
 
 - (void)setupFeedSelectorControl {
-    _feedSelectorControl = [self.dataSource segmentedControlForSlidingSegmentViewController:self];
-    [(id)_feedSelectorControl addTarget:self action:@selector(feedSelectionDidChange:) forControlEvents:UIControlEventValueChanged];
+    if (_feedSelectorControl != [self.dataSource segmentedControlForSlidingSegmentViewController:self]) {
+        _feedSelectorControl = [self.dataSource segmentedControlForSlidingSegmentViewController:self];
+        [(id)_feedSelectorControl addTarget:self action:@selector(feedSelectionDidChange:) forControlEvents:UIControlEventValueChanged];
+        self.scrollView.delegate = self.feedSelectorControl;
+    }
 }
 
 - (void)layoutSegmentViewControllers {
@@ -71,9 +47,43 @@
     [self.scrollView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[currentVC]|" options:0 metrics:nil views:views]];
 }
 
+- (void)reload {
+    [self setupFeedSelectorControl];
+    [self layoutSegmentViewControllers];
+}
+
+#pragma mark - Overrides 
+
+- (UIScrollView *)scrollView {
+    if (!_scrollView) {
+        UIScrollView *strongScrollView = [[UIScrollView alloc] init];
+        _scrollView = strongScrollView;
+        _scrollView.backgroundColor = [UIColor colorWithRed:224 green:224 blue:224 alpha:1.0];
+        _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+        _scrollView.pagingEnabled = YES;
+        _scrollView.showsHorizontalScrollIndicator = NO;
+        _scrollView.showsVerticalScrollIndicator = NO;
+        [self.view addSubview:_scrollView];
+        
+        NSDictionary *views = NSDictionaryOfVariableBindings(_scrollView);
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_scrollView]|" options:0 metrics:nil views:views]];
+        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_scrollView]|" options:0 metrics:nil views:views]];
+        
+    }
+    return _scrollView;
+}
+
+- (void)setDataSource:(id<GNZSlidingSegmentViewControllerDatasource>)dataSource {
+    _dataSource = dataSource;
+    if (_dataSource) {
+        [self reload];
+    }
+    
+}
+
 #pragma mark - Datasource Convenience
 - (NSUInteger)segmentViewControllerCount {
-    return [self.dataSource numberOfSegmentsForSlidingSegmentViewController:self];
+    return [self.feedSelectorControl numberOfSegments];
 }
 
 - (UIViewController *)viewControllerForIndex:(NSUInteger)index {
