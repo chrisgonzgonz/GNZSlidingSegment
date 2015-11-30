@@ -8,13 +8,13 @@
 
 #import "GNZViewController.h"
 #import <GNZSlidingSegment/GNZSegmentedControl.h>
-#import <GNZSlidingSegment/GNZSegmentPageViewController.h>
+#import <GNZSlidingSegment/GNZSlidingSegmentViewController.h>
 #import "GNZPageViewController.h"
 #import <GNZSlidingSegment/UISegmentedControl+GNZCompatibility.h>
 
-@interface GNZViewController () <GNZSegmentPageViewControllerDatasource>
+@interface GNZViewController () <GNZSlidingSegmentViewControllerDatasource>
 @property (weak, nonatomic) GNZSegmentedControl *segmentedControl;
-@property (nonatomic) GNZSegmentPageViewController *segmentPageViewController;
+@property (nonatomic) GNZSlidingSegmentViewController *segmentPageViewController;
 @property (nonatomic) UISegmentedControl *lameSegmentedControl;
 @property (nonatomic) NSArray *pageControllers;
 @end
@@ -22,11 +22,11 @@
 @implementation GNZViewController
 
 #pragma mark - Datasource
-- (id<GNZSegment>)segmentedControlForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController {
+- (id<GNZSegment>)segmentedControlForSlidingSegmentViewController:(GNZSlidingSegmentViewController *)segmentPageController {
     return self.segmentedControl;
 }
 
-- (UIViewController *)viewControllerForSegmentPageController:(GNZSegmentPageViewController *)segmentPageController atIndex:(NSUInteger)index {
+- (UIViewController *)slidingSegmentViewController:(GNZSlidingSegmentViewController *)segmentPageController viewControllerForSegmentAtIndex:(NSUInteger)index {
     UIViewController *vc;
     if (index < self.pageControllers.count) {
         vc = self.pageControllers[index];
@@ -34,7 +34,7 @@
     return vc;
 }
 
-- (NSUInteger)numberOfPagesForSegmentPageView:(GNZSegmentPageViewController *)segmentPageController {
+- (NSUInteger)numberOfSegmentsForSlidingSegmentViewController:(GNZSlidingSegmentViewController *)segmentPageController {
     return self.pageControllers.count;
 }
 
@@ -45,7 +45,7 @@
 {
     [super viewDidLoad];
     
-    self.segmentPageViewController = [GNZSegmentPageViewController new];
+    self.segmentPageViewController = [GNZSlidingSegmentViewController new];
     self.segmentPageViewController.dataSource = self;
     
     [self.segmentPageViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];

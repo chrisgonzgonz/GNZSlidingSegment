@@ -30,11 +30,6 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 @implementation GNZSegmentedControl
 
 #pragma mark - Initializers
-- (instancetype)initWithFrame:(CGRect)frame {
-    NSAssert(NO, @"use initWithSegmentCount");
-    return nil;
-}
-
 - (instancetype)initWithSegmentCount:(NSUInteger)count indicatorStyle:(GNZIndicatorStyle)style options:(NSDictionary<NSString *,UIColor *> *)segmentOptions {
     if (self = [super initWithFrame:CGRectZero]) {
         _style = style;
@@ -104,7 +99,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     for (UIView *segmentView in self.segments) {
         UIView *segmentIndicator = [self selectionIndicator];
         [segmentView addSubview:segmentIndicator];
-//        height
+        
         NSLayoutConstraint *heightConstraint = [NSLayoutConstraint constraintWithItem:segmentIndicator attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:1.0 constant:0.0];
         [segmentView addConstraint:heightConstraint];
         [self.elevatorHeightConstraints addObject:heightConstraint];

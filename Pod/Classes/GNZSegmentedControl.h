@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "GNZSegment.h"
 
-NS_ASSUME_NONNULL_BEGIN
 
+NS_ASSUME_NONNULL_BEGIN
 extern NSString * const GNZSegmentOptionControlBackgroundColor;
 extern NSString * const GNZSegmentOptionSelectedSegmentTintColor;
 extern NSString * const GNZSegmentOptionDefaultSegmentTintColor;
@@ -32,6 +32,5 @@ typedef NS_ENUM(NSUInteger, GNZIndicatorStyle) {
 - (void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)segment;
 - (void)setImage:(UIImage *)image forSegmentAtIndex:(NSUInteger)segment;
 - (void)setTitle:(nullable NSString *)title andImage:(nullable UIImage *)image withSpacing:(CGFloat)spacing forSegmentAtIndex:(NSUInteger)segment;
-
-NS_ASSUME_NONNULL_END
 @end
+NS_ASSUME_NONNULL_END

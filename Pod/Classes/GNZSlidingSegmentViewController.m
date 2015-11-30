@@ -6,15 +6,15 @@
 //
 //
 
-#import "GNZSegmentPageViewController.h"
+#import "GNZSlidingSegmentViewController.h"
 
-@interface GNZSegmentPageViewController ()
+@interface GNZSlidingSegmentViewController ()
 @property (nonatomic) UIPageViewController *pageViewController;
 @property (nonatomic) UIScrollView *scrollView;
 @property (nonatomic) id<GNZSegment> feedSelectorControl;
 @property (nonatomic) NSUInteger currentIndex;
 @end
-@implementation GNZSegmentPageViewController
+@implementation GNZSlidingSegmentViewController
 
 #pragma mark - Lifecycle
 - (void)viewDidLoad {
@@ -40,17 +40,17 @@
     NSDictionary *views = @{@"scrollView": self.scrollView};
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[scrollView]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[scrollView]|" options:0 metrics:nil views:views]];
-    [self setupPages];
+    [self layoutSegmentViewControllers];
 }
 
 - (void)setupFeedSelectorControl {
-    _feedSelectorControl = [self.dataSource segmentedControlForSegmentPageController:self];
+    _feedSelectorControl = [self.dataSource segmentedControlForSlidingSegmentViewController:self];
     [(id)_feedSelectorControl addTarget:self action:@selector(feedSelectionDidChange:) forControlEvents:UIControlEventValueChanged];
 }
 
-- (void)setupPages {
+- (void)layoutSegmentViewControllers {
     NSMutableDictionary *views;
-    for (int count = 0; count < [self pageCount]; count++) {
+    for (int count = 0; count < [self segmentViewControllerCount]; count++) {
         UIViewController *previousVC = count ? [self viewControllerForIndex:count-1] : nil;
         UIViewController *currentVC = [self viewControllerForIndex:count];
         [currentVC.view setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -72,12 +72,12 @@
 }
 
 #pragma mark - Datasource Convenience
-- (NSUInteger)pageCount {
-    return [self.dataSource numberOfPagesForSegmentPageView:self];
+- (NSUInteger)segmentViewControllerCount {
+    return [self.dataSource numberOfSegmentsForSlidingSegmentViewController:self];
 }
 
 - (UIViewController *)viewControllerForIndex:(NSUInteger)index {
-    return [self.dataSource viewControllerForSegmentPageController:self atIndex:index];
+    return [self.dataSource slidingSegmentViewController:self viewControllerForSegmentAtIndex:index];
 }
 
 #pragma mark - Actions
