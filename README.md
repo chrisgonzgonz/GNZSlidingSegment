@@ -20,10 +20,6 @@ it, simply add the following line to your Podfile:
 pod "GNZSlidingSegment"
 ```
 
-## Author
-
-Chris Gonzales, gonzales.chris.a@gmail.com
-
 ## License
 
 GNZSlidingSegment is available under the MIT license. See the LICENSE file for more info.
