@@ -8,34 +8,34 @@
 
 #import "GNZViewController.h"
 #import <GNZSlidingSegment/GNZSegmentedControl.h>
-#import <GNZSlidingSegment/GNZSlidingSegmentViewController.h>
-#import "GNZPageViewController.h"
+#import <GNZSlidingSegment/GNZSlidingSegmentView.h>
+#import "GNZSegmentViewController.h"
 #import <GNZSlidingSegment/UISegmentedControl+GNZCompatibility.h>
 
-@interface GNZViewController () <GNZSlidingSegmentViewControllerDatasource>
+@interface GNZViewController () <GNZSlidingSegmentViewDatasource>
 @property (weak, nonatomic) GNZSegmentedControl *segmentedControl;
-@property (nonatomic) GNZSlidingSegmentViewController *segmentPageViewController;
+@property (nonatomic) GNZSlidingSegmentView *slidingSegmentView;
 @property (nonatomic) UISegmentedControl *lameSegmentedControl;
-@property (nonatomic) NSArray *pageControllers;
+@property (nonatomic) NSArray *segmentViewControllers;
 @end
 
 @implementation GNZViewController
 
 #pragma mark - Datasource
-- (id<GNZSegment>)segmentedControlForSlidingSegmentViewController:(GNZSlidingSegmentViewController *)segmentPageController {
+- (id<GNZSegment>)segmentedControlForSlidingSegmentViewController:(GNZSlidingSegmentView *)segmentPageController {
     return self.segmentedControl;
 }
 
-- (UIViewController *)slidingSegmentViewController:(GNZSlidingSegmentViewController *)segmentPageController viewControllerForSegmentAtIndex:(NSUInteger)index {
+- (UIViewController *)slidingSegmentViewController:(GNZSlidingSegmentView *)segmentPageController viewControllerForSegmentAtIndex:(NSUInteger)index {
     UIViewController *vc;
-    if (index < self.pageControllers.count) {
-        vc = self.pageControllers[index];
+    if (index < self.segmentViewControllers.count) {
+        vc = self.segmentViewControllers[index];
     }
     return vc;
 }
 
-- (NSUInteger)numberOfSegmentsForSlidingSegmentViewController:(GNZSlidingSegmentViewController *)segmentPageController {
-    return self.pageControllers.count;
+- (NSUInteger)numberOfSegmentsForSlidingSegmentViewController:(GNZSlidingSegmentView *)segmentPageController {
+    return self.segmentViewControllers.count;
 }
 
 
@@ -45,36 +45,36 @@
 {
     [super viewDidLoad];
     
-    self.segmentPageViewController = [GNZSlidingSegmentViewController new];
+    self.slidingSegmentView = [GNZSlidingSegmentView new];
     
-    [self.segmentPageViewController.view setTranslatesAutoresizingMaskIntoConstraints:NO];
-    [self.view addSubview:self.segmentPageViewController.view];
+    [self.slidingSegmentView setTranslatesAutoresizingMaskIntoConstraints:NO];
+    [self.view addSubview:self.slidingSegmentView];
     
     
-    NSDictionary *views = @{@"topLayoutGuide": self.topLayoutGuide, @"segmentedControl": self.segmentedControl, @"pageView": self.segmentPageViewController.view};
+    NSDictionary *views = @{@"topLayoutGuide": self.topLayoutGuide, @"segmentedControl": self.segmentedControl, @"slidingSegmentView": self.slidingSegmentView};
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[segmentedControl]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[pageView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide][segmentedControl(50)][pageView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[slidingSegmentView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide][segmentedControl(50)][slidingSegmentView]|" options:0 metrics:nil views:views]];
     
-    self.segmentPageViewController.dataSource = self;
+    self.slidingSegmentView.dataSource = self;
 }
 
-- (NSArray *)pageControllers {
-    if (!_pageControllers) {
-        GNZPageViewController *page1 = [[GNZPageViewController alloc] initWithNibName:NSStringFromClass([GNZPageViewController class]) bundle:nil];
+- (NSArray *)segmentViewControllers {
+    if (!_segmentViewControllers) {
+        GNZSegmentViewController *page1 = [[GNZSegmentViewController alloc] initWithNibName:NSStringFromClass([GNZSegmentViewController class]) bundle:nil];
         page1.view.backgroundColor = [UIColor grayColor];
         page1.pageNumber = 1;
         
-        GNZPageViewController *page2 =[[GNZPageViewController alloc] initWithNibName:NSStringFromClass([GNZPageViewController class]) bundle:nil];
+        GNZSegmentViewController *page2 =[[GNZSegmentViewController alloc] initWithNibName:NSStringFromClass([GNZSegmentViewController class]) bundle:nil];
         page2.view.backgroundColor = [UIColor purpleColor];
         page2.pageNumber = 2;
         
-        GNZPageViewController *page3 =[[GNZPageViewController alloc] initWithNibName:NSStringFromClass([GNZPageViewController class]) bundle:nil];
+        GNZSegmentViewController *page3 =[[GNZSegmentViewController alloc] initWithNibName:NSStringFromClass([GNZSegmentViewController class]) bundle:nil];
         page3.view.backgroundColor = [UIColor redColor];
         page3.pageNumber = 3;
-        _pageControllers = @[page1, page2, page3];
+        _segmentViewControllers = @[page1, page2, page3];
     }
-    return _pageControllers;
+    return _segmentViewControllers;
 }
 
 - (GNZSegmentedControl *)segmentedControl {

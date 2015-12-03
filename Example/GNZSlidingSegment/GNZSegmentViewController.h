@@ -1,5 +1,5 @@
 //
-//  GNZPageViewController.h
+//  GNZSegmentViewController.h
 //  GNZSlidingSegment
 //
 //  Created by Chris Gonzales on 11/18/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GNZPageViewController : UIViewController
+@interface GNZSegmentViewController : UIViewController
 @property (nonatomic) NSUInteger pageNumber;
 @end

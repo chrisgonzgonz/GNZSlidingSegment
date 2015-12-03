@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		077F31BA658FBE8948995FFB6A70C3F4 /* GNZSlidingSegmentViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C0E4FDA7FEC2432D50712B71C9AA2004 /* GNZSlidingSegmentViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0A83D746E6259301C887FD9220B3EC0C /* UISegmentedControl+GNZCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = EF9F559A0D8BCF9A897F431261112ED7 /* UISegmentedControl+GNZCompatibility.m */; };
-		1573DEE085E9E9041FA41FDD4958C20D /* GNZSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = 2982439804C00EDF5B4F231B0DC714A8 /* GNZSegment.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1C0EADE7740DF0A31D781846AF3DF668 /* GNZSlidingSegment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C4B36D7E4AAC32B6E905E13BD9E86 /* GNZSlidingSegment-dummy.m */; };
-		2D1E5FB09776D9DC53FF6260C76C288E /* UISegmentedControl+GNZCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = CB86F4971960EF510F47694EE86EB1BD /* UISegmentedControl+GNZCompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		07BE767638C2CB14046D6F96FB1E3D89 /* GNZSegment.h in Headers */ = {isa = PBXBuildFile; fileRef = ABBD14A13AA675773E8B7C4B14D9647A /* GNZSegment.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0E50CA70189A33559F6D8B24DF7BF1AB /* GNZSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 090172FD0716222FE97F77E210922AC4 /* GNZSegmentedControl.m */; };
+		11F728A185515726E502B69EEB1C3A3A /* GNZSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9350D73C7F3B216294E84524494238 /* GNZSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		22DA44985E5A5C94B7EB351F43613867 /* GNZSlidingSegment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 649C4B36D7E4AAC32B6E905E13BD9E86 /* GNZSlidingSegment-dummy.m */; };
+		2E5E29F9B6F0AFAB89BF329B9A34B884 /* GNZSlidingSegmentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 017A0C1D240C7D582A628EA87BC6BE4D /* GNZSlidingSegmentView.m */; };
 		5CA27FD3FE2107561D4CD26458F06D36 /* Pods-GNZSlidingSegment_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 892A81F8BA60AA1A9F6DC05705C7DF3B /* Pods-GNZSlidingSegment_Tests-dummy.m */; };
 		5FD10D4DDE47294C16F366D5D1FC7D98 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		A7AAF3F63DE5E1F7D24FE6519EEE92DD /* GNZSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0107B1A2164E5F18ED5DB5A66D8C1FC4 /* GNZSegmentedControl.m */; };
+		8C29A14F8C9EF1795F4CD414AA9DC030 /* GNZSlidingSegmentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 088B91FBFE3EAA3F11708348DE46B932 /* GNZSlidingSegmentView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		91CCB34051994273B0F17991152213D1 /* UISegmentedControl+GNZCompatibility.m in Sources */ = {isa = PBXBuildFile; fileRef = 44EBD06F3D0F1D4948D73574068D929C /* UISegmentedControl+GNZCompatibility.m */; };
 		AD7D6FA574F86B62E39E233CD6480C47 /* Pods-GNZSlidingSegment_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DF34C7321D3206EA42229EDB5431C586 /* Pods-GNZSlidingSegment_Example-dummy.m */; };
 		B05A045C4AF8882B7FEF677833D250DF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
-		BA45A74B4AF19EF4B47BAB46378A2F0B /* GNZSlidingSegmentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B78AADD955223F7604B5BE1E839A60 /* GNZSlidingSegmentViewController.m */; };
-		BE0F1106EE621CF999A47975B5690B1F /* GNZSegmentedControl.h in Headers */ = {isa = PBXBuildFile; fileRef = C144E1FCB6C78741EAE1DE327BE753F6 /* GNZSegmentedControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA8B7456CC5C15D69399908DF3E9BEA4 /* UISegmentedControl+GNZCompatibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 11B35F49D729E2ED74A31E29BE708909 /* UISegmentedControl+GNZCompatibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CCA488890079F9296251A946D6DBD4F7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,14 +47,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0107B1A2164E5F18ED5DB5A66D8C1FC4 /* GNZSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GNZSegmentedControl.m; sourceTree = "<group>"; };
+		017A0C1D240C7D582A628EA87BC6BE4D /* GNZSlidingSegmentView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GNZSlidingSegmentView.m; sourceTree = "<group>"; };
+		088B91FBFE3EAA3F11708348DE46B932 /* GNZSlidingSegmentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GNZSlidingSegmentView.h; sourceTree = "<group>"; };
+		090172FD0716222FE97F77E210922AC4 /* GNZSegmentedControl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GNZSegmentedControl.m; sourceTree = "<group>"; };
 		0BCA0F089BD2D8424B91A88F35775717 /* Pods-GNZSlidingSegment_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GNZSlidingSegment_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		11B35F49D729E2ED74A31E29BE708909 /* UISegmentedControl+GNZCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+GNZCompatibility.h"; sourceTree = "<group>"; };
 		13BE37C5F14A28E3801A6B50C2590955 /* GNZSlidingSegment-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GNZSlidingSegment-prefix.pch"; sourceTree = "<group>"; };
 		1D6F864A2FB1FD43EDBDD4FAD9D64593 /* Pods-GNZSlidingSegment_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Tests-resources.sh"; sourceTree = "<group>"; };
 		26BE780B583563631C21461CA752CF79 /* Pods-GNZSlidingSegment_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Example.release.xcconfig"; sourceTree = "<group>"; };
-		2982439804C00EDF5B4F231B0DC714A8 /* GNZSegment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GNZSegment.h; sourceTree = "<group>"; };
 		2BC586C8EB41BDF7593E75639CE8B586 /* GNZSlidingSegment.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GNZSlidingSegment.xcconfig; sourceTree = "<group>"; };
 		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		44EBD06F3D0F1D4948D73574068D929C /* UISegmentedControl+GNZCompatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+GNZCompatibility.m"; sourceTree = "<group>"; };
 		649BED805A6FC3E95C1B62C116F562B3 /* Pods-GNZSlidingSegment_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GNZSlidingSegment_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		649C4B36D7E4AAC32B6E905E13BD9E86 /* GNZSlidingSegment-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GNZSlidingSegment-dummy.m"; sourceTree = "<group>"; };
 		6B83C4752951D5DA921B0AE0D49A7F62 /* Pods-GNZSlidingSegment_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-GNZSlidingSegment_Example-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -65,16 +68,13 @@
 		923FC67F96D9CA4F3A4E7A920DCB9212 /* GNZSlidingSegment.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GNZSlidingSegment.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		A34F83B4864D6D700FA5E62E5277640B /* Pods-GNZSlidingSegment_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		A6A71944AA15C017E94F54C526822E5F /* libGNZSlidingSegment.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libGNZSlidingSegment.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABBD14A13AA675773E8B7C4B14D9647A /* GNZSegment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GNZSegment.h; sourceTree = "<group>"; };
 		B8FAE268866C6F9D544CE907648E83BA /* Pods-GNZSlidingSegment_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-GNZSlidingSegment_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C0E4FDA7FEC2432D50712B71C9AA2004 /* GNZSlidingSegmentViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GNZSlidingSegmentViewController.h; sourceTree = "<group>"; };
-		C144E1FCB6C78741EAE1DE327BE753F6 /* GNZSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GNZSegmentedControl.h; sourceTree = "<group>"; };
 		C2C40FB6333BC1A7B9D6E64222CB115B /* Pods-GNZSlidingSegment_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		C4B78AADD955223F7604B5BE1E839A60 /* GNZSlidingSegmentViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GNZSlidingSegmentViewController.m; sourceTree = "<group>"; };
-		CB86F4971960EF510F47694EE86EB1BD /* UISegmentedControl+GNZCompatibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UISegmentedControl+GNZCompatibility.h"; sourceTree = "<group>"; };
 		D9BEAC6D86EF2AEC343FE392CE6CE80D /* Pods-GNZSlidingSegment_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-GNZSlidingSegment_Example-resources.sh"; sourceTree = "<group>"; };
+		DB9350D73C7F3B216294E84524494238 /* GNZSegmentedControl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GNZSegmentedControl.h; sourceTree = "<group>"; };
 		DF34C7321D3206EA42229EDB5431C586 /* Pods-GNZSlidingSegment_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-GNZSlidingSegment_Example-dummy.m"; sourceTree = "<group>"; };
-		EF9F559A0D8BCF9A897F431261112ED7 /* UISegmentedControl+GNZCompatibility.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UISegmentedControl+GNZCompatibility.m"; sourceTree = "<group>"; };
 		F984D3CF262FFBDC6B8D1460D81821A7 /* Pods-GNZSlidingSegment_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-GNZSlidingSegment_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		FCCCF71F6B681255D3F2F416C39D8D6D /* libPods-GNZSlidingSegment_Example.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GNZSlidingSegment_Example.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -117,7 +117,7 @@
 		15DC6292D40610D9A099A9DBDD761E40 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				2D4606C0D5FB84E58F94AFF2C708987C /* Classes */,
+				FEA483573201D2C6F55DD1C91CC156A5 /* Classes */,
 			);
 			path = Pod;
 			sourceTree = "<group>";
@@ -129,20 +129,6 @@
 				AA76662BC33DCA11676CD2CD69191983 /* Pods-GNZSlidingSegment_Tests */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		2D4606C0D5FB84E58F94AFF2C708987C /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				2982439804C00EDF5B4F231B0DC714A8 /* GNZSegment.h */,
-				C144E1FCB6C78741EAE1DE327BE753F6 /* GNZSegmentedControl.h */,
-				0107B1A2164E5F18ED5DB5A66D8C1FC4 /* GNZSegmentedControl.m */,
-				C0E4FDA7FEC2432D50712B71C9AA2004 /* GNZSlidingSegmentViewController.h */,
-				C4B78AADD955223F7604B5BE1E839A60 /* GNZSlidingSegmentViewController.m */,
-				CB86F4971960EF510F47694EE86EB1BD /* UISegmentedControl+GNZCompatibility.h */,
-				EF9F559A0D8BCF9A897F431261112ED7 /* UISegmentedControl+GNZCompatibility.m */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		32DD613E612AD6D92A878AED478D88CC /* Products */ = {
@@ -242,17 +228,31 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		FEA483573201D2C6F55DD1C91CC156A5 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				ABBD14A13AA675773E8B7C4B14D9647A /* GNZSegment.h */,
+				DB9350D73C7F3B216294E84524494238 /* GNZSegmentedControl.h */,
+				090172FD0716222FE97F77E210922AC4 /* GNZSegmentedControl.m */,
+				088B91FBFE3EAA3F11708348DE46B932 /* GNZSlidingSegmentView.h */,
+				017A0C1D240C7D582A628EA87BC6BE4D /* GNZSlidingSegmentView.m */,
+				11B35F49D729E2ED74A31E29BE708909 /* UISegmentedControl+GNZCompatibility.h */,
+				44EBD06F3D0F1D4948D73574068D929C /* UISegmentedControl+GNZCompatibility.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0ED808555C051201DFDCDCC9A1A81652 /* Headers */ = {
+		B59DFCE0C79A23BAE2E15DF7F4066603 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1573DEE085E9E9041FA41FDD4958C20D /* GNZSegment.h in Headers */,
-				BE0F1106EE621CF999A47975B5690B1F /* GNZSegmentedControl.h in Headers */,
-				077F31BA658FBE8948995FFB6A70C3F4 /* GNZSlidingSegmentViewController.h in Headers */,
-				2D1E5FB09776D9DC53FF6260C76C288E /* UISegmentedControl+GNZCompatibility.h in Headers */,
+				07BE767638C2CB14046D6F96FB1E3D89 /* GNZSegment.h in Headers */,
+				11F728A185515726E502B69EEB1C3A3A /* GNZSegmentedControl.h in Headers */,
+				8C29A14F8C9EF1795F4CD414AA9DC030 /* GNZSlidingSegmentView.h in Headers */,
+				BA8B7456CC5C15D69399908DF3E9BEA4 /* UISegmentedControl+GNZCompatibility.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,9 +263,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E7B2046CFE0B123321C60B3A51C1CF66 /* Build configuration list for PBXNativeTarget "GNZSlidingSegment" */;
 			buildPhases = (
-				7A409EA99D67C42A598350796B3CEF60 /* Sources */,
+				86131CEFA2DC4AD02F9F898C5D077346 /* Sources */,
 				114B2FFA52CB66C6039049A989340175 /* Frameworks */,
-				0ED808555C051201DFDCDCC9A1A81652 /* Headers */,
+				B59DFCE0C79A23BAE2E15DF7F4066603 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -384,14 +384,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7A409EA99D67C42A598350796B3CEF60 /* Sources */ = {
+		86131CEFA2DC4AD02F9F898C5D077346 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A7AAF3F63DE5E1F7D24FE6519EEE92DD /* GNZSegmentedControl.m in Sources */,
-				1C0EADE7740DF0A31D781846AF3DF668 /* GNZSlidingSegment-dummy.m in Sources */,
-				BA45A74B4AF19EF4B47BAB46378A2F0B /* GNZSlidingSegmentViewController.m in Sources */,
-				0A83D746E6259301C887FD9220B3EC0C /* UISegmentedControl+GNZCompatibility.m in Sources */,
+				0E50CA70189A33559F6D8B24DF7BF1AB /* GNZSegmentedControl.m in Sources */,
+				22DA44985E5A5C94B7EB351F43613867 /* GNZSlidingSegment-dummy.m in Sources */,
+				2E5E29F9B6F0AFAB89BF329B9A34B884 /* GNZSlidingSegmentView.m in Sources */,
+				91CCB34051994273B0F17991152213D1 /* UISegmentedControl+GNZCompatibility.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

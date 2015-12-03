@@ -6,20 +6,20 @@
 //
 //
 
-#import "GNZSlidingSegmentViewController.h"
+#import "GNZSlidingSegmentView.h"
 
-@interface GNZSlidingSegmentViewController ()
+@interface GNZSlidingSegmentView ()
 @property (weak, nonatomic) UIScrollView *scrollView;
 @property (nonatomic) id<GNZSegment> feedSelectorControl;
 @end
-@implementation GNZSlidingSegmentViewController
+@implementation GNZSlidingSegmentView
 
 #pragma mark - Setup
 
-- (void)setupFeedSelectorControl {
+- (void)connectSegmentedControl {
     if (_feedSelectorControl != [self.dataSource segmentedControlForSlidingSegmentViewController:self]) {
         _feedSelectorControl = [self.dataSource segmentedControlForSlidingSegmentViewController:self];
-        [(id)_feedSelectorControl addTarget:self action:@selector(feedSelectionDidChange:) forControlEvents:UIControlEventValueChanged];
+        [(id)_feedSelectorControl addTarget:self action:@selector(segmentSelectionDidChange:) forControlEvents:UIControlEventValueChanged];
         self.scrollView.delegate = self.feedSelectorControl;
     }
 }
@@ -48,7 +48,7 @@
 }
 
 - (void)reload {
-    [self setupFeedSelectorControl];
+    [self connectSegmentedControl];
     [self layoutSegmentViewControllers];
 }
 
@@ -63,22 +63,21 @@
         _scrollView.pagingEnabled = YES;
         _scrollView.showsHorizontalScrollIndicator = NO;
         _scrollView.showsVerticalScrollIndicator = NO;
-        [self.view addSubview:_scrollView];
+        [self addSubview:_scrollView];
         
         NSDictionary *views = NSDictionaryOfVariableBindings(_scrollView);
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_scrollView]|" options:0 metrics:nil views:views]];
-        [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_scrollView]|" options:0 metrics:nil views:views]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_scrollView]|" options:0 metrics:nil views:views]];
+        [self addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_scrollView]|" options:0 metrics:nil views:views]];
         
     }
     return _scrollView;
 }
 
-- (void)setDataSource:(id<GNZSlidingSegmentViewControllerDatasource>)dataSource {
+- (void)setDataSource:(id<GNZSlidingSegmentViewDatasource>)dataSource {
     _dataSource = dataSource;
     if (_dataSource) {
         [self reload];
     }
-    
 }
 
 #pragma mark - Datasource Convenience
@@ -91,7 +90,7 @@
 }
 
 #pragma mark - Actions
--(void)feedSelectionDidChange:(id)sender
+-(void)segmentSelectionDidChange:(id)sender
 {
     CGRect frame = self.scrollView.frame;
     frame.origin.x = frame.size.width * [(id)self.feedSelectorControl selectedSegmentIndex];

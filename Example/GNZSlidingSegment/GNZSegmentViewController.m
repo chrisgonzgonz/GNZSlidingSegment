@@ -1,19 +1,19 @@
 //
-//  GNZPageViewController.m
+//  GNZSegmentViewController.m
 //  GNZSlidingSegment
 //
 //  Created by Chris Gonzales on 11/18/15.
 //  Copyright © 2015 Chris Gonzales. All rights reserved.
 //
 
-#import "GNZPageViewController.h"
+#import "GNZSegmentViewController.h"
 
-@interface GNZPageViewController ()
+@interface GNZSegmentViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *pageNumberLabel;
 
 @end
 
-@implementation GNZPageViewController
+@implementation GNZSegmentViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
