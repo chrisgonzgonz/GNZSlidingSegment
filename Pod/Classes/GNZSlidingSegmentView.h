@@ -12,8 +12,8 @@
 @class GNZSlidingSegmentView;
 
 @protocol GNZSlidingSegmentViewDatasource <NSObject>
-- (id<GNZSegment>)segmentedControlForSlidingSegmentViewController:(GNZSlidingSegmentView *)segmentPageController;
-- (UIViewController *)slidingSegmentViewController:(GNZSlidingSegmentView *)slidingSegmentViewController viewControllerForSegmentAtIndex:(NSUInteger)index;
+- (id<GNZSegment>)segmentedControlForSlidingSegmentView:(GNZSlidingSegmentView *)slidingSegmentView;
+- (UIViewController *)slidingSegmentView:(GNZSlidingSegmentView *)slidingSegmentView viewControllerForSegmentAtIndex:(NSUInteger)index;
 @end
 
 @interface GNZSlidingSegmentView : UIView

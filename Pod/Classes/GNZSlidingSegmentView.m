@@ -17,8 +17,8 @@
 #pragma mark - Setup
 
 - (void)connectSegmentedControl {
-    if (_feedSelectorControl != [self.dataSource segmentedControlForSlidingSegmentViewController:self]) {
-        _feedSelectorControl = [self.dataSource segmentedControlForSlidingSegmentViewController:self];
+    if (_feedSelectorControl != [self.dataSource segmentedControlForSlidingSegmentView:self]) {
+        _feedSelectorControl = [self.dataSource segmentedControlForSlidingSegmentView:self];
         [(id)_feedSelectorControl addTarget:self action:@selector(segmentSelectionDidChange:) forControlEvents:UIControlEventValueChanged];
         self.scrollView.delegate = self.feedSelectorControl;
     }
@@ -86,7 +86,7 @@
 }
 
 - (UIViewController *)viewControllerForIndex:(NSUInteger)index {
-    return [self.dataSource slidingSegmentViewController:self viewControllerForSegmentAtIndex:index];
+    return [self.dataSource slidingSegmentView:self viewControllerForSegmentAtIndex:index];
 }
 
 #pragma mark - Actions

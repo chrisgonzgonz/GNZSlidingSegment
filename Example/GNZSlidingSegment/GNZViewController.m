@@ -22,11 +22,11 @@
 @implementation GNZViewController
 
 #pragma mark - Datasource
-- (id<GNZSegment>)segmentedControlForSlidingSegmentViewController:(GNZSlidingSegmentView *)segmentPageController {
+- (id<GNZSegment>)segmentedControlForSlidingSegmentView:(GNZSlidingSegmentView *)segmentPageController {
     return self.segmentedControl;
 }
 
-- (UIViewController *)slidingSegmentViewController:(GNZSlidingSegmentView *)segmentPageController viewControllerForSegmentAtIndex:(NSUInteger)index {
+- (UIViewController *)slidingSegmentView:(GNZSlidingSegmentView *)segmentPageController viewControllerForSegmentAtIndex:(NSUInteger)index {
     UIViewController *vc;
     if (index < self.segmentViewControllers.count) {
         vc = self.segmentViewControllers[index];
