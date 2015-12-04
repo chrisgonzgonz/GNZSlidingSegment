@@ -11,6 +11,7 @@
 NSString * const GNZSegmentOptionControlBackgroundColor = @"SEGMENT_OPTION_BACKGROUND_COLOR";
 NSString * const GNZSegmentOptionSelectedSegmentTintColor = @"SEGMENT_OPTION_SELECTED_COLOR";
 NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFAULT_COLOR";
+NSString * const GNZSegmentOptionIndicatorColor = @"SEGMENT_INDICATOR_COLOR";
 
 @interface GNZSegmentedControl ()
 @property (nonatomic) NSUInteger selectedSegmentIndex;
@@ -18,8 +19,9 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 @property (nonatomic) UIColor *controlBackgroundColor;
 @property (nonatomic) UIColor *segmentDefaultColor;
 @property (nonatomic) UIColor *segmentSelectedColor;
+@property (nonatomic) UIColor *indicatorColor;
 @property (nonatomic) UIColor *hairlineShadowColor;
-@property (nonatomic) GNZIndicatorStyle style;
+@property (nonatomic) GNZIndicatorStyle indicatorStyle;
 
 //default
 @property (weak, nonatomic) UIView *defaultSelectionIndicator;
@@ -34,11 +36,13 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 #pragma mark - Initializers
 - (instancetype)initWithSegmentCount:(NSUInteger)count indicatorStyle:(GNZIndicatorStyle)style options:(NSDictionary<NSString *,UIColor *> *)segmentOptions {
     if (self = [super initWithFrame:CGRectZero]) {
-        _style = style;
+        _indicatorStyle = style;
         _elevatorHeightConstraints = [NSMutableArray new];
         _controlBackgroundColor = segmentOptions[GNZSegmentOptionControlBackgroundColor];
         _segmentDefaultColor = segmentOptions[GNZSegmentOptionDefaultSegmentTintColor];
         _segmentSelectedColor = segmentOptions[GNZSegmentOptionSelectedSegmentTintColor];
+        _indicatorColor = segmentOptions[GNZSegmentOptionIndicatorColor];
+        
         [self setupSegmentsWithCount:count];
     }
     return self;
@@ -72,7 +76,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     _selectedSegmentIndex = 0;
     [self activateSelectedSegment];
     
-    [self setIndicatorConstraintsForStyle:self.style];
+    [self setIndicatorConstraintsForStyle:self.indicatorStyle];
     [self addHairlineShadow];
 }
 
@@ -168,7 +172,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
     if (!_defaultSelectionIndicator) {
         UIView *strongIndicator = [UIView new];
         _defaultSelectionIndicator = strongIndicator;
-        _defaultSelectionIndicator.backgroundColor = [UIColor orangeColor];
+        _defaultSelectionIndicator.backgroundColor = self.indicatorColor;
         _defaultSelectionIndicator.translatesAutoresizingMaskIntoConstraints = NO;
         [self addSubview:_defaultSelectionIndicator];
     }
@@ -177,7 +181,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 
 - (UIView *)selectionIndicator {
     UIView *newIndicator = [UIView new];
-    newIndicator.backgroundColor = [UIColor blackColor];
+    newIndicator.backgroundColor = self.indicatorColor;
     newIndicator.translatesAutoresizingMaskIntoConstraints = NO;
     return newIndicator;
 }
@@ -234,7 +238,7 @@ NSString * const GNZSegmentOptionDefaultSegmentTintColor = @"SEGMENT_OPTION_DEFA
 }
 
 - (void)adjustIndicatorForScroll:(UIScrollView *)scrollView {
-    switch (self.style) {
+    switch (self.indicatorStyle) {
         case GNZIndicatorStyleElevator:
             [self adjustElevatorIndicatorsWithScroll:scrollView];
             break;

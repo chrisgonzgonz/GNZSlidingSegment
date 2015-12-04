@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 extern NSString * const GNZSegmentOptionControlBackgroundColor;
 extern NSString * const GNZSegmentOptionSelectedSegmentTintColor;
 extern NSString * const GNZSegmentOptionDefaultSegmentTintColor;
+extern NSString * const GNZSegmentOptionIndicatorColor;
 
 typedef NS_ENUM(NSUInteger, GNZIndicatorStyle) {
     GNZIndicatorStyleDefault,
