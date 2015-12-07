@@ -32,5 +32,6 @@ typedef NS_ENUM(NSUInteger, GNZIndicatorStyle) {
 - (void)setTitle:(NSString*)title forSegmentAtIndex:(NSUInteger)segment;
 - (void)setImage:(UIImage *)image forSegmentAtIndex:(NSUInteger)segment;
 - (void)setTitle:(nullable NSString *)title andImage:(nullable UIImage *)image withSpacing:(CGFloat)spacing forSegmentAtIndex:(NSUInteger)segment;
+- (void)adjustIndicatorForScroll:(UIScrollView *)scrollView;
 @end
 NS_ASSUME_NONNULL_END

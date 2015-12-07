@@ -250,7 +250,6 @@ NSString * const GNZSegmentOptionIndicatorColor = @"SEGMENT_INDICATOR_COLOR";
 }
 
 - (void)adjustDefaultIndicatorWithScroll:(UIScrollView *)scrollView {
-    self.selectedSegmentIndex = [self currentPageForScrollView:scrollView];
     self.defaultIndicatorConstraint.constant = (scrollView.contentOffset.x/scrollView.contentSize.width)*self.frame.size.width;
 }
 
@@ -264,25 +263,6 @@ NSString * const GNZSegmentOptionIndicatorColor = @"SEGMENT_INDICATOR_COLOR";
         CGFloat constant =  percentHeight*5;
         constraint.constant = MAX(0, constant);
     }
-}
-
-#pragma mark - Scroll View Delegate
-
-- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-{
-    self.selectedSegmentIndex = [self currentPageForScrollView:scrollView];
-    [self adjustIndicatorForScroll:scrollView];
-}
-
-- (NSInteger) currentPageForScrollView:(UIScrollView *)scrollView
-{
-    CGFloat currentX = scrollView.contentOffset.x+self.frame.size.width/2;
-    CGFloat currentPage = (currentX/self.frame.size.width);
-    if (currentPage < 0)
-        currentPage = 0;
-    if (currentPage >= self.segments.count)
-        currentPage = self.segments.count-1;
-    return currentPage;
 }
 
 @end

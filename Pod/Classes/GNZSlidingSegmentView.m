@@ -8,7 +8,7 @@
 
 #import "GNZSlidingSegmentView.h"
 
-@interface GNZSlidingSegmentView ()
+@interface GNZSlidingSegmentView () <UIScrollViewDelegate>
 @property (weak, nonatomic) UIScrollView *scrollView;
 @property (nonatomic) id<GNZSegment> feedSelectorControl;
 @end
@@ -20,7 +20,7 @@
     if (_feedSelectorControl != [self.dataSource segmentedControlForSlidingSegmentView:self]) {
         _feedSelectorControl = [self.dataSource segmentedControlForSlidingSegmentView:self];
         [(id)_feedSelectorControl addTarget:self action:@selector(segmentSelectionDidChange:) forControlEvents:UIControlEventValueChanged];
-        self.scrollView.delegate = self.feedSelectorControl;
+        self.scrollView.delegate = self;
     }
 }
 
@@ -95,6 +95,38 @@
     CGRect frame = self.scrollView.frame;
     frame.origin.x = frame.size.width * [(id)self.feedSelectorControl selectedSegmentIndex];
     [self.scrollView scrollRectToVisible:frame animated:YES];
+}
+
+#pragma mark - UIScrollView Delegate 
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    self.feedSelectorControl.selectedSegmentIndex = [self currentPageForScrollView:scrollView];
+    if ([self.feedSelectorControl respondsToSelector:@selector(adjustIndicatorForScroll:)])
+        [(id <GNZSegment>)self.feedSelectorControl adjustIndicatorForScroll:scrollView];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+//    NSLog(@"decel end, page %@", @([self currentPageForScrollView:scrollView]));
+//    NSLog(@"correct page %lu", [self.feedSelectorControl selectedSegmentIndex]);
+    
+    [self.delegate slidingSegmentView:self segmentDidChange:[self.feedSelectorControl selectedSegmentIndex]];
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+//    NSLog(@"scroll animation end, page %@",@([self currentPageForScrollView:scrollView]));
+//    NSLog(@"correct page %lu", [self.feedSelectorControl selectedSegmentIndex]);
+    
+    [self.delegate slidingSegmentView:self segmentDidChange:[self.feedSelectorControl selectedSegmentIndex]];
+}
+
+- (NSInteger) currentPageForScrollView:(UIScrollView *)scrollView
+{
+    CGFloat currentX = scrollView.contentOffset.x+self.frame.size.width/2;
+    CGFloat currentPage = (currentX/self.frame.size.width);
+    if (currentPage < 0)
+        currentPage = 0;
+    if (currentPage >= [self.feedSelectorControl numberOfSegments])
+        currentPage = [self.feedSelectorControl numberOfSegments]-1;
+    return currentPage;
 }
 
 @end

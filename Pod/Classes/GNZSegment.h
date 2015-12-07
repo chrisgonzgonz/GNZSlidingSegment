@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol GNZSegment <NSObject, UIScrollViewDelegate>
+@protocol GNZSegment <NSObject>
 
 - (NSUInteger)selectedSegmentIndex;
 - (void)setSelectedSegmentIndex:(NSUInteger)index;
 - (NSUInteger)numberOfSegments;
+
+@optional
+- (void)adjustIndicatorForScroll:(UIScrollView *)scrollView;
 
 @end

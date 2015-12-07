@@ -12,7 +12,7 @@
 #import "GNZSegmentViewController.h"
 #import <GNZSlidingSegment/UISegmentedControl+GNZCompatibility.h>
 
-@interface GNZViewController () <GNZSlidingSegmentViewDatasource>
+@interface GNZViewController () <GNZSlidingSegmentViewDatasource, gnzSlidingSegmentViewDelegate>
 @property (weak, nonatomic) GNZSegmentedControl *segmentedControl;
 @property (nonatomic) GNZSlidingSegmentView *slidingSegmentView;
 @property (nonatomic) UISegmentedControl *lameSegmentedControl;
@@ -21,7 +21,7 @@
 
 @implementation GNZViewController
 
-#pragma mark - Datasource
+#pragma mark - GNZSlidingSegmentView Datasource
 - (id<GNZSegment>)segmentedControlForSlidingSegmentView:(GNZSlidingSegmentView *)segmentPageController {
     return self.segmentedControl;
 }
@@ -38,6 +38,10 @@
     return self.segmentViewControllers.count;
 }
 
+#pragma mark - GNZSlidingSegmentView Delegate
+- (void)slidingSegmentView:(GNZSlidingSegmentView *)slidingSegmentView segmentDidChange:(NSUInteger)newSegmentIndex {
+    NSLog(@"segment changed!");
+}
 
 #pragma mark - Lifecycle
 
@@ -57,6 +61,7 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[topLayoutGuide][segmentedControl(50)][slidingSegmentView]|" options:0 metrics:nil views:views]];
     
     self.slidingSegmentView.dataSource = self;
+    self.slidingSegmentView.delegate = self;
 }
 
 - (NSArray *)segmentViewControllers {
@@ -79,7 +84,7 @@
 
 - (GNZSegmentedControl *)segmentedControl {
     if (!_segmentedControl) {
-        GNZSegmentedControl *segmentControl = [[GNZSegmentedControl alloc] initWithSegmentCount:3 indicatorStyle:GNZIndicatorStyleElevator options:@{GNZSegmentOptionControlBackgroundColor: [UIColor colorWithRed:244/255.0 green:245/255.0 blue:245/255.0 alpha:1.0], GNZSegmentOptionDefaultSegmentTintColor: [UIColor colorWithRed:166/255.0 green:166/255.0 blue:166/255.0 alpha:1.0], GNZSegmentOptionSelectedSegmentTintColor: [UIColor colorWithRed: 44/255.0 green: 54/255.0 blue: 67/255.0 alpha:1.0], GNZSegmentOptionIndicatorColor: [UIColor orangeColor]}];
+        GNZSegmentedControl *segmentControl = [[GNZSegmentedControl alloc] initWithSegmentCount:3 indicatorStyle:GNZIndicatorStyleDefault options:@{GNZSegmentOptionControlBackgroundColor: [UIColor colorWithRed:244/255.0 green:245/255.0 blue:245/255.0 alpha:1.0], GNZSegmentOptionDefaultSegmentTintColor: [UIColor colorWithRed:166/255.0 green:166/255.0 blue:166/255.0 alpha:1.0], GNZSegmentOptionSelectedSegmentTintColor: [UIColor colorWithRed: 44/255.0 green: 54/255.0 blue: 67/255.0 alpha:1.0], GNZSegmentOptionIndicatorColor: [UIColor orangeColor]}];
         segmentControl.translatesAutoresizingMaskIntoConstraints = NO;
         [segmentControl setTitle:@"Segment 1" forSegmentAtIndex:0];
         [segmentControl setTitle:@"Segment 2" forSegmentAtIndex:1];
