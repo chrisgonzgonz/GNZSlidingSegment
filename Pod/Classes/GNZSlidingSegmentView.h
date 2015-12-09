@@ -15,13 +15,13 @@
 - (id<GNZSegment>)segmentedControlForSlidingSegmentView:(GNZSlidingSegmentView *)slidingSegmentView;
 - (UIViewController *)slidingSegmentView:(GNZSlidingSegmentView *)slidingSegmentView viewControllerForSegmentAtIndex:(NSUInteger)index;
 @end
-@protocol gnzSlidingSegmentViewDelegate <NSObject>
+@protocol GNZSlidingSegmentViewDelegate <NSObject>
 @optional
 - (void)slidingSegmentView:(GNZSlidingSegmentView *)slidingSegmentView segmentDidChange:(NSUInteger)newSegmentIndex;
 @end
 
 @interface GNZSlidingSegmentView : UIView
 @property (weak, nonatomic) id <GNZSlidingSegmentViewDatasource> dataSource;
-@property (weak, nonatomic) id <gnzSlidingSegmentViewDelegate> delegate;
+@property (weak, nonatomic) id <GNZSlidingSegmentViewDelegate> delegate;
 @end
 

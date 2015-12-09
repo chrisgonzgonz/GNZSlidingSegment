@@ -12,7 +12,7 @@
 #import "GNZSegmentViewController.h"
 #import <GNZSlidingSegment/UISegmentedControl+GNZCompatibility.h>
 
-@interface GNZViewController () <GNZSlidingSegmentViewDatasource, gnzSlidingSegmentViewDelegate>
+@interface GNZViewController () <GNZSlidingSegmentViewDatasource, GNZSlidingSegmentViewDelegate>
 @property (weak, nonatomic) GNZSegmentedControl *segmentedControl;
 @property (nonatomic) GNZSlidingSegmentView *slidingSegmentView;
 @property (nonatomic) UISegmentedControl *lameSegmentedControl;
