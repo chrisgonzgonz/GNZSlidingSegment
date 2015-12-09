@@ -22,7 +22,7 @@ typedef NS_ENUM(NSUInteger, GNZIndicatorStyle) {
 };
 
 @interface GNZSegmentedControl : UIControl <GNZSegment>
-
+@property (nonatomic) UIFont *font;
 + (instancetype)new __attribute__((unavailable("use initWithSegmentCount:options:")));
 - (instancetype)init __attribute__((unavailable("use initWithSegmentCount:options:")));
 - (instancetype)initWithFrame:(CGRect)frame __attribute__((unavailable("use initWithSegmentCount:options:")));

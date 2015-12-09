@@ -134,7 +134,6 @@ NSString * const GNZSegmentOptionIndicatorColor = @"SEGMENT_INDICATOR_COLOR";
     }
     
     self.elevatorHeightConstraints.firstObject.constant = 5;
-    
 }
 
 - (UIButton *)selectedSegmentButton {
@@ -167,6 +166,15 @@ NSString * const GNZSegmentOptionIndicatorColor = @"SEGMENT_INDICATOR_COLOR";
 
 
 #pragma mark - Overrides
+
+- (void)setFont:(UIFont *)font {
+    if (font) {
+        for (UIButton *button in self.segments) {
+            [button.titleLabel setFont:font];
+        }
+        _font = font;
+    }
+}
 
 - (UIView *)defaultSelectionIndicator {
     if (!_defaultSelectionIndicator) {
@@ -242,8 +250,7 @@ NSString * const GNZSegmentOptionIndicatorColor = @"SEGMENT_INDICATOR_COLOR";
         case GNZIndicatorStyleElevator:
             [self adjustElevatorIndicatorsWithScroll:scrollView];
             break;
-            
-        default:
+        case GNZIndicatorStyleDefault:
             [self adjustDefaultIndicatorWithScroll:scrollView];
             break;
     }
