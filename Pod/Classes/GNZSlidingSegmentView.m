@@ -129,4 +129,12 @@
     return currentPage;
 }
 
+- (BOOL)scrollsToTop {
+    return self.scrollView.scrollsToTop;
+}
+
+- (void)setScrollsToTop:(BOOL)scrollsToTop {
+    self.scrollView.scrollsToTop = scrollsToTop;
+}
+
 @end

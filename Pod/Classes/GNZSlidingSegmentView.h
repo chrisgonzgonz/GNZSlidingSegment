@@ -23,5 +23,6 @@
 @interface GNZSlidingSegmentView : UIView
 @property (weak, nonatomic) id <GNZSlidingSegmentViewDatasource> dataSource;
 @property (weak, nonatomic) id <GNZSlidingSegmentViewDelegate> delegate;
+@property (nonatomic) BOOL scrollsToTop;
 @end
 
