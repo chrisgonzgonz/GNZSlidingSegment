@@ -18,6 +18,7 @@
 @protocol GNZSlidingSegmentViewDelegate <NSObject>
 @optional
 - (void)slidingSegmentView:(GNZSlidingSegmentView *)slidingSegmentView segmentDidChange:(NSUInteger)newSegmentIndex;
+- (void)slidingSegmentView:(GNZSlidingSegmentView *)slidingSegmentView didChangeFromPreviousIndex:(NSUInteger)previous toIndex:(NSUInteger)next;
 @end
 
 @interface GNZSlidingSegmentView : UIView

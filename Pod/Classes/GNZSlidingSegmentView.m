@@ -99,7 +99,14 @@
 
 #pragma mark - UIScrollView Delegate 
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-    self.feedSelectorControl.selectedSegmentIndex = [self currentPageForScrollView:scrollView];
+    NSUInteger currentIndex = [self currentPageForScrollView:scrollView];
+    if (currentIndex != self.feedSelectorControl.selectedSegmentIndex) {
+        if ([self.delegate respondsToSelector:@selector(slidingSegmentView:didChangeFromPreviousIndex:toIndex:)]) {
+            [self.delegate slidingSegmentView:self didChangeFromPreviousIndex:self.feedSelectorControl.selectedSegmentIndex toIndex:currentIndex];
+        }
+        self.feedSelectorControl.selectedSegmentIndex = currentIndex;
+    }
+        
     if ([self.feedSelectorControl respondsToSelector:@selector(adjustIndicatorForScroll:)])
         [(id <GNZSegment>)self.feedSelectorControl adjustIndicatorForScroll:scrollView];
 }
