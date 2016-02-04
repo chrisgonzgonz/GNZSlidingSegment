@@ -58,7 +58,7 @@
     if (!_scrollView) {
         UIScrollView *strongScrollView = [[UIScrollView alloc] init];
         _scrollView = strongScrollView;
-        _scrollView.backgroundColor = [UIColor colorWithRed:224 green:224 blue:224 alpha:1.0];
+        _scrollView.backgroundColor = [UIColor clearColor];
         _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
         _scrollView.pagingEnabled = YES;
         _scrollView.showsHorizontalScrollIndicator = NO;
@@ -115,14 +115,18 @@
 //    NSLog(@"decel end, page %@", @([self currentPageForScrollView:scrollView]));
 //    NSLog(@"correct page %lu", [self.feedSelectorControl selectedSegmentIndex]);
     
-    [self.delegate slidingSegmentView:self segmentDidChange:[self.feedSelectorControl selectedSegmentIndex]];
+    if ([self.delegate respondsToSelector:@selector(slidingSegmentView:segmentDidChange:)]) {
+        [self.delegate slidingSegmentView:self segmentDidChange:[self.feedSelectorControl selectedSegmentIndex]];
+    }
 }
 
 - (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
 //    NSLog(@"scroll animation end, page %@",@([self currentPageForScrollView:scrollView]));
 //    NSLog(@"correct page %lu", [self.feedSelectorControl selectedSegmentIndex]);
     
-    [self.delegate slidingSegmentView:self segmentDidChange:[self.feedSelectorControl selectedSegmentIndex]];
+    if ([self.delegate respondsToSelector:@selector(slidingSegmentView:segmentDidChange:)]) {
+        [self.delegate slidingSegmentView:self segmentDidChange:[self.feedSelectorControl selectedSegmentIndex]];
+    }
 }
 
 - (NSInteger) currentPageForScrollView:(UIScrollView *)scrollView
